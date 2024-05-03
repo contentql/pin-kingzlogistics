@@ -1,4 +1,5 @@
 import { SlugType } from '@/blocks'
+import AboutUsTwo from '@/blocks/AboutUsTwo'
 import RenderBlocks from '@/blocks/RenderBlocks'
 import { serverClient } from '@/trpc/serverClient'
 
@@ -10,6 +11,9 @@ const Page = async ({ params }: { params: { route: SlugType[] } }) => {
   return (
     <div>
       <RenderBlocks layout={pageData} slug={slug} />
+      <AboutUsTwo />
+      {/* <ServicesAreaTwo />
+      <BrandArea /> */}
     </div>
   )
 }
