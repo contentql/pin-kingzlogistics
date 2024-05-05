@@ -55,9 +55,6 @@ export interface Media {
   width?: number | null;
   height?: number | null;
   sizes?: {
-    square?: {
-      url?: string | null;
-    };
     thumbnail?: {
       url?: string | null;
       width?: number | null;
@@ -119,6 +116,19 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'page1';
+          }
+        | {
+            hero: {
+              title: string;
+              title_2: string;
+              sub_title: string;
+              id?: string | null;
+            }[];
+            button_one: string;
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'heroThree';
           }
       )[]
     | null;

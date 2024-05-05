@@ -19,10 +19,13 @@ const RenderBlocks: React.FC<RenderBlocksProps> = ({ layout, slug }) => {
     { initialData: layout },
   )
 
+  console.log(pageData)
+
   return (
     <div>
       {pageData?.map((block, index) => {
         const Block = blocksJSX[block.blockType as SlugType]
+        console.log(Block)
         if (Block) {
           return <Block key={index} {...block} />
         }
