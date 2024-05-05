@@ -141,6 +141,28 @@ export interface Page {
             blockName?: string | null;
             blockType: 'Service_3';
           }
+        | {
+            title: string;
+            sub_title: string;
+            description: string;
+            button_one: string;
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'About_2';
+          }
+        | {
+            servicesData: {
+              title: string;
+              sub_title: string;
+              icon: string;
+              button_text: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ServiceArea_2';
+          }
       )[]
     | null;
   updatedAt: string;
