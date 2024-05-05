@@ -122,6 +122,7 @@ const Hero_3 = ({ hero, button_one, button_two }: any) => {
   //       <div className='slider-pagination slider1-pagination'></div>
   //     </section>
   //   )
+  console.log(hero)
   return <div>Hero_3</div>
 }
 

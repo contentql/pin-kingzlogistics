@@ -130,6 +130,17 @@ export interface Page {
             blockName?: string | null;
             blockType: 'heroThree';
           }
+        | {
+            services_3: {
+              title: string;
+              sub_title: string;
+              icon: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Service_3';
+          }
       )[]
     | null;
   updatedAt: string;
