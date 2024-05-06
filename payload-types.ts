@@ -89,6 +89,11 @@ export interface Blog {
     [k: string]: unknown;
   };
   description_html?: string | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    image?: string | Media | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
