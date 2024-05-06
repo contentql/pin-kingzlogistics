@@ -8,6 +8,8 @@ import Navbar_3 from './Navbar_3'
 import { NavbarThree_Block } from './Navbar_3/block'
 import Page1 from './Page1'
 import { Page1_Block } from './Page1/block'
+import ProcessThree from './Process_3'
+import { ProcessThree_Block } from './Process_3/block'
 import Service_3 from './Service_3'
 import { Service_3_Block } from './Service_3/block'
 import ServicesAreaTwo from './ServicesArea_2'
@@ -24,6 +26,7 @@ export const blocksJSX = {
   ServiceArea_2: ServicesAreaTwo,
   // PriceCalc_2: PriceCalcArea_2,
   NavbarThree: Navbar_3,
+  ProcessThree : ProcessThree
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -37,4 +40,5 @@ export const blocks = {
   ServiceArea_2_Block: ServiceArea_2_Block,
   NavbarThree_Block: NavbarThree_Block,
   // PriceCalc_2_Block: PriceCalc_2_Block,
+  ProcessThree_Block: ProcessThree_Block,
 }
