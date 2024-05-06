@@ -177,6 +177,23 @@ export interface Page {
             blockName?: string | null;
             blockType: 'NavbarThree';
           }
+        | {
+            title: string;
+            sub_title: string;
+            button_one: string;
+            image: string | Media;
+            video_id: string;
+            steps?:
+              | {
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ProcessThree';
+          }
       )[]
     | null;
   updatedAt: string;
