@@ -1,7 +1,7 @@
 import { Block } from 'payload/types'
 
 export const PortfolioArea_Block: Block = {
-  slug: 'PortfolioArea',
+  slug: 'PortfolioArea_2',
   // imageURL: '',
   interfaceName: 'PortfolioArea',
   labels: {

@@ -1,3 +1,5 @@
+'use client'
+
 import about_img from '@styles/assets/img/about/about-us-2.png'
 import Image from 'next/image'
 import Link from 'next/link'

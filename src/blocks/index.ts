@@ -1,21 +1,17 @@
 // This is just to consolidate all the existing blocks and it's respective jsx
 // Always prefer to individually import, the required block or jsx
-
-import BrandArea from './BrandArea'
-import { BrandArea_Block } from './BrandArea/block'
-import FunfactArea from './FunfactArea'
-import { FunfactArea_Block } from './FunfactArea/block'
-
-import TeamSection from './TeamSection'
-import { TeamSection_Block } from './TeamSection/block'
-
-
 import AboutUs_2 from '@/blocks/About_2'
 import { About_2_Block } from '@/blocks/About_2/block'
+import BrandArea from '@/blocks/BrandArea'
+import { BrandArea_Block } from '@/blocks/BrandArea/block'
+import FunfactArea from '@/blocks/FunfactArea'
+import { FunfactArea_Block } from '@/blocks/FunfactArea/block'
 import HelpService from '@/blocks/Help_Services'
 import { Home1_Help_Service_Block } from '@/blocks/Help_Services/block'
 import Hero_3 from '@/blocks/Hero_3'
 import { HeroThree_Block } from '@/blocks/Hero_3/block'
+import Home1AboutUs from '@/blocks/Home1_AboutUs'
+import { Home1_AboutUs_Block } from '@/blocks/Home1_AboutUs/block'
 import Home1Banner from '@/blocks/Home1_Banner'
 import { Home1_Banner_Block } from '@/blocks/Home1_Banner/block'
 import Home1ServicesArea from '@/blocks/Home1_Services'
@@ -24,18 +20,18 @@ import Navbar_3 from '@/blocks/Navbar_3'
 import { NavbarThree_Block } from '@/blocks/Navbar_3/block'
 import Page1 from '@/blocks/Page1'
 import { Page1_Block } from '@/blocks/Page1/block'
+import PortfolioArea from '@/blocks/PortfolioArea_2'
+import { PortfolioArea_Block } from '@/blocks/PortfolioArea_2/block'
 import Service_3 from '@/blocks/Service_3'
 import { Service_3_Block } from '@/blocks/Service_3/block'
 import ServicesAreaTwo from '@/blocks/ServicesArea_2'
 import { ServiceArea_2_Block } from '@/blocks/ServicesArea_2/block'
+import TeamSection from '@/blocks/TeamSection'
+import { TeamSection_Block } from '@/blocks/TeamSection/block'
 import Home1_Team_section from '@/blocks/Team_Section'
 import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
 import Test1_1 from '@/blocks/Test1_1'
 import { Test1_1_Block } from '@/blocks/Test1_1/block'
-
-import Home1AboutUs from './Home1_AboutUs'
-import { Home1_AboutUs_Block } from './Home1_AboutUs/block'
-
 
 export const blocksJSX = {
   Test1_1: Test1_1,
@@ -56,7 +52,7 @@ export const blocksJSX = {
   Home1_Help_Service: HelpService,
   Home1_Team_section: Home1_Team_section,
   Home1AboutUs: Home1AboutUs,
-
+  PortfolioArea_2: PortfolioArea,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -79,7 +75,7 @@ export const blocks = {
   Home1_Help_Service: Home1_Help_Service_Block,
   Home1_Team_section: Home1_Team_section_Block,
   Home1_AboutUs: Home1_AboutUs_Block,
+  PortfolioArea_2: PortfolioArea_Block,
 
   // PriceCalc_2_Block: PriceCalc_2_Block,
-
 }

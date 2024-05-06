@@ -1,9 +1,7 @@
-import Image from 'next/image'
+import { Media, TeamSection as TeamSectionType } from '@payload-types'
 import Link from 'next/link'
 
-import team_data from '@/mockData/team-data'
-
-const TeamSection = () => {
+const TeamSection = (TeamSectionData: TeamSectionType) => {
   return (
     <section
       className='team__3 grey-bg-4 pt-120 pb-70 wow fadeInUp'
@@ -19,13 +17,13 @@ const TeamSection = () => {
           </div>
         </div>
         <div className='row'>
-          {team_data.slice(3, 6).map(item => (
-            <div className='col-xl-4 col-lg-4 col-md-6' key={item.id}>
+          {TeamSectionData?.team_experts?.map((item, index) => (
+            <div className='col-xl-4 col-lg-4 col-md-6' key={index}>
               <div className='team__3-item mb-50'>
                 <div className='team__3-item-img w-img'>
-                  <Link href={`/team-details/${item.id}`}>
-                    <Image
-                      src={item.image}
+                  <Link href={`/team-details/${index + 1}`}>
+                    <img
+                      src={(item?.expert_image as Media)?.url || ''}
                       style={{ width: '100%', height: 'auto' }}
                       alt='Team'
                     />
@@ -61,10 +59,12 @@ const TeamSection = () => {
                   </div>
                   <div className='team__3-item-content'>
                     <span className='team__3-item-subtitle'>
-                      {item.desination}
+                      {item?.designation}
                     </span>
                     <h4 className='team__3-item-title'>
-                      <Link href={`/team-details/${item.id}`}>{item.name}</Link>
+                      <Link href={`/team-details/${index + 1}`}>
+                        {item?.expert_name}
+                      </Link>
                     </h4>
                   </div>
                 </div>
