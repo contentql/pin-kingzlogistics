@@ -1,16 +1,5 @@
 // This is just to consolidate all the existing blocks and it's respective jsx
 // Always prefer to individually import, the required block or jsx
-
-
-import BrandArea from './BrandArea'
-import { BrandArea_Block } from './BrandArea/block'
-import FunfactArea from './FunfactArea'
-import { FunfactArea_Block } from './FunfactArea/block'
-
-import TeamSection from './TeamSection'
-import { TeamSection_Block } from './TeamSection/block'
-
-
 import AboutUs_2 from '@/blocks/About_2'
 import { About_2_Block } from '@/blocks/About_2/block'
 import HelpService from '@/blocks/Help_Services'
@@ -34,8 +23,16 @@ import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
 import Test1_1 from '@/blocks/Test1_1'
 import { Test1_1_Block } from '@/blocks/Test1_1/block'
 
+import BrandArea from './BrandArea'
+import { BrandArea_Block } from './BrandArea/block'
+import FunfactArea from './FunfactArea'
+import { FunfactArea_Block } from './FunfactArea/block'
 import Home1AboutUs from './Home1_AboutUs'
 import { Home1_AboutUs_Block } from './Home1_AboutUs/block'
+import ProcessThree from './Process_3'
+import { ProcessThree_Block } from './Process_3/block'
+import TeamSection from './TeamSection'
+import { TeamSection_Block } from './TeamSection/block'
 
 export const blocksJSX = {
   Test1_1: Test1_1,
@@ -54,7 +51,7 @@ export const blocksJSX = {
   // PriceCalc_2: PriceCalcArea_2,
   NavbarThree: Navbar_3,
 
-  ProcessThree : ProcessThree,
+  ProcessThree: ProcessThree,
 
   Home1_Help_Service: HelpService,
   Home1_Team_section: Home1_Team_section,
@@ -85,5 +82,4 @@ export const blocks = {
   // PriceCalc_2_Block: PriceCalc_2_Block,
 
   ProcessThree_Block: ProcessThree_Block,
-
 }

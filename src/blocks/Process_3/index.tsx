@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import 'react-modal-video/css/modal-video.min.css'
 
-const WorkProcessArea_3 = (data: any) => {
+const ProcessThree = (data: any) => {
   const { title, sub_title, button_one, steps, image, video_id } = data
 
   const useModal = () => {
@@ -79,4 +79,4 @@ const WorkProcessArea_3 = (data: any) => {
   )
 }
 
-export default WorkProcessArea_3
+export default ProcessThree

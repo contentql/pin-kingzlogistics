@@ -4,6 +4,7 @@ export const ProcessThree_Block: Block = {
   slug: 'ProcessThree',
   // imageURL: '',
   imageURL: './page.PNG',
+  interfaceName: 'ProcessThree',
   labels: {
     singular: 'ProcessThree Block',
     plural: 'ProcessThree Blocks',
@@ -16,7 +17,7 @@ export const ProcessThree_Block: Block = {
       required: true,
     },
     {
-      name:'sub_title',
+      name: 'sub_title',
       label: 'Sub Title',
       type: 'text',
       required: true,
@@ -38,13 +39,13 @@ export const ProcessThree_Block: Block = {
       },
     },
     {
-      name : "video_id",
+      name: 'video_id',
       label: 'Video ID',
       type: 'text',
       required: true,
     },
     {
-      name : "steps",
+      name: 'steps',
       label: 'Steps',
       type: 'array',
       fields: [
@@ -59,8 +60,8 @@ export const ProcessThree_Block: Block = {
           label: 'Description',
           type: 'text',
           required: true,
-        }
-      ]
-    }
+        },
+      ],
+    },
   ],
 }
