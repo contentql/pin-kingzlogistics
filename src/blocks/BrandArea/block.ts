@@ -3,6 +3,7 @@ import { Block } from 'payload/types'
 export const BrandArea_Block: Block = {
   slug: 'BrandArea',
   // imageURL: '',
+  interfaceName: 'BrandArea',
   labels: {
     singular: 'BrandArea Block',
     plural: 'BrandArea Blocks',
