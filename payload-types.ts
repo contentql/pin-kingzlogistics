@@ -122,133 +122,228 @@ export interface Page {
             blockName?: string | null;
             blockType: 'page1';
           }
-        | {
-            title: string;
-            banner_image?: string | Media | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Home1_Banner';
-          }
-        | {
-            title: string;
-            subtitle: string;
-            services?:
-              | {
-                  serviceIcon?: string | Media | null;
-                  title: string;
-                  subtitle: string;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Home1_Services';
-          }
-        | {
-            hero: {
-              title: string;
-              title_2: string;
-              sub_title: string;
-              hero_2_image: string | Media;
-              id?: string | null;
-            }[];
-            button_one: string;
-            button_two: string;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'heroThree';
-          }
-        | {
-            services_3: {
-              title: string;
-              sub_title: string;
-              icon: string;
-              id?: string | null;
-            }[];
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Service_3';
-          }
-        | {
-            title: string;
-            sub_title: string;
-            description: string;
-            image: string | Media;
-            test_text: string;
-            button_one: string;
-            button_two: string;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'About_2';
-          }
-        | {
-            servicesData: {
-              title: string;
-              sub_title: string;
-              icon: string;
-              button_text: string;
-              id?: string | null;
-            }[];
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'ServiceArea_2';
-          }
-        | {
-            button_two: string;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'NavbarThree';
-          }
-        | {
-            title: string;
-            buttonText: string;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Home1_Help_Service';
-          }
-        | {
-            title: string;
-            subtitle: string;
-            team?:
-              | {
-                  teamMemberImage?: string | Media | null;
-                  role: string;
-                  name: string;
-                  socialMedia?:
-                    | {
-                        socialMediaName: string;
-                        socialMediaLink: string;
-                        id?: string | null;
-                      }[]
-                    | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Home1_Team_section';
-          }
-        | {
-            title: string;
-            subtitle: string;
-            AboutUsVideoUrl: string;
-            tab?:
-              | {
-                  tabTitle: string;
-                  tabDescription: string;
-                  tabUrl: string;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Home1_AboutUs';
-          }
+        | BrandArea
+        | FunfactArea
+        | TeamSection
+        | Home1_Banner
+        | Home1_Services
+        | HeroThree
+        | Service_3
+        | About_2
+        | ServiceArea_2
+        | NavbarThree
+        | Home1_Help_Service
+        | Home1_TeamSection
+        | Home1_AboutUs
       )[]
     | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BrandArea".
+ */
+export interface BrandArea {
+  brands: {
+    brand_image: string | Media;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'BrandArea';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FunfactArea".
+ */
+export interface FunfactArea {
+  funfacts: {
+    number: number;
+    title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'FunfactArea';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TeamSection".
+ */
+export interface TeamSection {
+  team_experts: {
+    expert_image: string | Media;
+    designation: string;
+    expert_name: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'TeamSection';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Banner".
+ */
+export interface Home1_Banner {
+  title: string;
+  banner_image?: string | Media | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Banner';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Services".
+ */
+export interface Home1_Services {
+  title: string;
+  subtitle: string;
+  services?:
+    | {
+        serviceIcon?: string | Media | null;
+        title: string;
+        subtitle: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Services';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "heroThree".
+ */
+export interface HeroThree {
+  hero: {
+    title: string;
+    title_2: string;
+    sub_title: string;
+    hero_2_image: string | Media;
+    id?: string | null;
+  }[];
+  button_one: string;
+  button_two: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'heroThree';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Service_3".
+ */
+export interface Service_3 {
+  services_3: {
+    title: string;
+    sub_title: string;
+    icon: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Service_3';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "About_2".
+ */
+export interface About_2 {
+  title: string;
+  sub_title: string;
+  description: string;
+  image: string | Media;
+  test_text: string;
+  button_one: string;
+  button_two: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'About_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceArea_2".
+ */
+export interface ServiceArea_2 {
+  servicesData: {
+    title: string;
+    sub_title: string;
+    icon: string;
+    button_text: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ServiceArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "NavbarThree".
+ */
+export interface NavbarThree {
+  button_two: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'NavbarThree';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Help_Service".
+ */
+export interface Home1_Help_Service {
+  title: string;
+  buttonText: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Help_Service';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Team_section".
+ */
+export interface Home1_TeamSection {
+  title: string;
+  subtitle: string;
+  team?:
+    | {
+        teamMemberImage?: string | Media | null;
+        role: string;
+        name: string;
+        socialMedia?:
+          | {
+              socialMediaName: string;
+              socialMediaLink: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Team_section';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_AboutUs".
+ */
+export interface Home1_AboutUs {
+  title: string;
+  subtitle: string;
+  AboutUsVideoUrl: string;
+  tab?:
+    | {
+        tabTitle: string;
+        tabDescription: string;
+        tabUrl: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_AboutUs';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

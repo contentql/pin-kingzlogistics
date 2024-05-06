@@ -1,14 +1,14 @@
-import gallery_2 from '@_styles/assets/img/gallery/gallery-01.jpg'
-import gallery_4 from '@_styles/assets/img/gallery/gallery-02.jpg'
-import gallery_5 from '@_styles/assets/img/gallery/gallery-03.jpg'
-import gallery_1 from '@_styles/assets/img/gallery/gallery-04.jpg'
-import gallery_3 from '@_styles/assets/img/gallery/gallery-05.jpg'
-import gallery_6 from '@_styles/assets/img/gallery/gallery-06.jpg'
+import gallery_2 from '@styles/assets/img/gallery/gallery-01.jpg'
+import gallery_4 from '@styles/assets/img/gallery/gallery-02.jpg'
+import gallery_5 from '@styles/assets/img/gallery/gallery-03.jpg'
+import gallery_1 from '@styles/assets/img/gallery/gallery-04.jpg'
+import gallery_3 from '@styles/assets/img/gallery/gallery-05.jpg'
+import gallery_6 from '@styles/assets/img/gallery/gallery-06.jpg'
 //portfolio area image
-import gallery_7 from '@_styles/assets/img/gallery/gallery-07.jpg'
-import gallery_8 from '@_styles/assets/img/gallery/gallery-08.jpg'
-import gallery_9 from '@_styles/assets/img/gallery/gallery-09.jpg'
-import portfolioIcon from '@_styles/assets/img/portfolio/p-icon.png'
+import gallery_7 from '@styles/assets/img/gallery/gallery-07.jpg'
+import gallery_8 from '@styles/assets/img/gallery/gallery-08.jpg'
+import gallery_9 from '@styles/assets/img/gallery/gallery-09.jpg'
+import portfolioIcon from '@styles/assets/img/portfolio/p-icon.png'
 
 const PortfolioData = [
   //home and home-2 data

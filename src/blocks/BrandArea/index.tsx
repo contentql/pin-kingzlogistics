@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import 'swiper/css/bundle'
 import { Autoplay } from 'swiper/modules'
 //swiper style
 import { Swiper, SwiperSlide } from 'swiper/react'

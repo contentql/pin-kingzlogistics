@@ -1,11 +1,15 @@
 //home img
 //home-two img
-import slider_two from '@assets/img/slider/slider-3.png'
-import slider_img_3 from '@assets/img/slider/slider-4.jpg'
-import slider_img_1 from '@assets/img/slider/slider-5.jpg'
-import slider_there from '@assets/img/slider/slider-5.jpg'
-import slider_img_2 from '@assets/img/slider/slider.png'
-import slider_one from '@assets/img/slider/slider.png'
+import slider_two from '@styles/assets/img/slider/slider-3.png'
+import slider_img_3 from '@styles/assets/img/slider/slider-4.jpg'
+import {
+  default as slider_img_1,
+  default as slider_there,
+} from '@styles/assets/img/slider/slider-5.jpg'
+import {
+  default as slider_img_2,
+  default as slider_one,
+} from '@styles/assets/img/slider/slider.png'
 
 const bannerData = [
   //home data

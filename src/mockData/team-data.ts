@@ -1,9 +1,9 @@
-import img_5 from '@_styles/assets/img/team/t-1.png'
-import img_4 from '@_styles/assets/img/team/t-2.png'
-import img_6 from '@_styles/assets/img/team/t-3.png'
-import img_3 from '@_styles/assets/img/team/t-6.png'
-import img_1 from '@_styles/assets/img/team/t-8.png'
-import img_2 from '@_styles/assets/img/team/t-9.png'
+import img_5 from '@styles/assets/img/team/t-1.png'
+import img_4 from '@styles/assets/img/team/t-2.png'
+import img_6 from '@styles/assets/img/team/t-3.png'
+import img_3 from '@styles/assets/img/team/t-6.png'
+import img_1 from '@styles/assets/img/team/t-8.png'
+import img_2 from '@styles/assets/img/team/t-9.png'
 
 const team_data = [
   // home
