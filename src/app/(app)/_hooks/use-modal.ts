@@ -1,7 +1,7 @@
-const { useState } = require("react")
+import { useState } from 'react'
 
 const useModal = () => {
-  const [isVideoOpen,setIsVideoOpen] = useState(false);
-  return {isVideoOpen,setIsVideoOpen}
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+  return { isVideoOpen, setIsVideoOpen }
 }
-export default useModal;
+export default useModal

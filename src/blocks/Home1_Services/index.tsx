@@ -3,7 +3,6 @@
 import services_data from '@data/services-data'
 import banner_overlay from '@styles/assets/img/services/services-bg.png'
 import Link from 'next/link'
-import 'swiper/css/bundle'
 import { Navigation } from 'swiper/modules'
 //swiper style
 import { Swiper, SwiperSlide } from 'swiper/react'

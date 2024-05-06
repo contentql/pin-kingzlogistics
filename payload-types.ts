@@ -123,6 +123,28 @@ export interface Page {
             blockType: 'page1';
           }
         | {
+            title: string;
+            banner_image?: string | Media | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Banner';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            services?:
+              | {
+                  serviceIcon?: string | Media | null;
+                  title: string;
+                  subtitle: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Services';
+          }
+        | {
             hero: {
               title: string;
               title_2: string;
@@ -177,10 +199,56 @@ export interface Page {
             blockName?: string | null;
             blockType: 'NavbarThree';
           }
+        | {
+            title: string;
+            buttonText: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Help_Service';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            team?:
+              | {
+                  teamMemberImage?: string | Media | null;
+                  role: string;
+                  name: string;
+                  socialMedia?:
+                    | {
+                        socialMediaName: string;
+                        socialMediaLink: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Team_section';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            AboutUsVideoUrl: string;
+            tab?:
+              | {
+                  tabTitle: string;
+                  tabDescription: string;
+                  tabUrl: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_AboutUs';
+          }
       )[]
     | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
