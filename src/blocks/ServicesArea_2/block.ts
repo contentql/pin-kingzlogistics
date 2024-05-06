@@ -2,6 +2,7 @@ import { Block } from 'payload/types'
 
 export const ServiceArea_2_Block: Block = {
   slug: 'ServiceArea_2',
+  interfaceName: 'ServiceArea_2',
   // imageURL: '',
   labels: {
     singular: 'ServiceArea_2 Block',
