@@ -1,8 +1,5 @@
 import { SlugType } from '@/blocks'
-import FunfactArea from '@/blocks/FunfactArea'
-import PortfolioArea from '@/blocks/PortfolioArea'
 import RenderBlocks from '@/blocks/RenderBlocks'
-import TeamSection from '@/blocks/TeamSection'
 import { serverClient } from '@/trpc/serverClient'
 
 const Page = async ({ params }: { params: { route: SlugType[] } }) => {
@@ -13,12 +10,6 @@ const Page = async ({ params }: { params: { route: SlugType[] } }) => {
   return (
     <div>
       <RenderBlocks layout={pageData} slug={slug} />
-      <FunfactArea />
-      <TeamSection />
-      <PortfolioArea />
-      {/* <AboutUsTwo /> */}
-      {/* <ServicesAreaTwo />
-      <BrandArea /> */}
     </div>
   )
 }
