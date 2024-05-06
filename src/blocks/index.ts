@@ -1,6 +1,7 @@
 // This is just to consolidate all the existing blocks and it's respective jsx
 // Always prefer to individually import, the required block or jsx
 
+
 import BrandArea from './BrandArea'
 import { BrandArea_Block } from './BrandArea/block'
 import FunfactArea from './FunfactArea'
@@ -36,7 +37,6 @@ import { Test1_1_Block } from '@/blocks/Test1_1/block'
 import Home1AboutUs from './Home1_AboutUs'
 import { Home1_AboutUs_Block } from './Home1_AboutUs/block'
 
-
 export const blocksJSX = {
   Test1_1: Test1_1,
   Page1: Page1,
@@ -53,10 +53,12 @@ export const blocksJSX = {
   ServiceArea_2: ServicesAreaTwo,
   // PriceCalc_2: PriceCalcArea_2,
   NavbarThree: Navbar_3,
+
+  ProcessThree : ProcessThree,
+
   Home1_Help_Service: HelpService,
   Home1_Team_section: Home1_Team_section,
   Home1AboutUs: Home1AboutUs,
-
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -81,5 +83,7 @@ export const blocks = {
   Home1_AboutUs: Home1_AboutUs_Block,
 
   // PriceCalc_2_Block: PriceCalc_2_Block,
+
+  ProcessThree_Block: ProcessThree_Block,
 
 }
