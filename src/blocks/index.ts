@@ -4,6 +4,8 @@ import AboutUs_2 from './About_2'
 import { About_2_Block } from './About_2/block'
 import Hero_3 from './Hero_3'
 import { HeroThree_Block } from './Hero_3/block'
+import Navbar_3 from './Navbar_3'
+import { NavbarThree_Block } from './Navbar_3/block'
 import Page1 from './Page1'
 import { Page1_Block } from './Page1/block'
 import Service_3 from './Service_3'
@@ -21,6 +23,7 @@ export const blocksJSX = {
   About_2: AboutUs_2,
   ServiceArea_2: ServicesAreaTwo,
   // PriceCalc_2: PriceCalcArea_2,
+  NavbarThree: Navbar_3,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -32,5 +35,6 @@ export const blocks = {
   Service_3: Service_3_Block,
   About_2_Block: About_2_Block,
   ServiceArea_2_Block: ServiceArea_2_Block,
+  NavbarThree_Block: NavbarThree_Block,
   // PriceCalc_2_Block: PriceCalc_2_Block,
 }

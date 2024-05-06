@@ -51,7 +51,7 @@ const AboutUs_2 = (data: any) => {
                       {button_one}
                     </Link>
 
-                    <Link href='/about-us' className='skew-btn'>
+                    <Link href='/about-us' className='fill-btn clip-btn'>
                       {button_two}
                     </Link>
                   </div>
