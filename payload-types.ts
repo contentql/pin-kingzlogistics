@@ -55,9 +55,6 @@ export interface Media {
   width?: number | null;
   height?: number | null;
   sizes?: {
-    square?: {
-      url?: string | null;
-    };
     thumbnail?: {
       url?: string | null;
       width?: number | null;
@@ -92,6 +89,11 @@ export interface Blog {
     [k: string]: unknown;
   };
   description_html?: string | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    image?: string | Media | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -120,10 +122,133 @@ export interface Page {
             blockName?: string | null;
             blockType: 'page1';
           }
+        | {
+            title: string;
+            banner_image?: string | Media | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Banner';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            services?:
+              | {
+                  serviceIcon?: string | Media | null;
+                  title: string;
+                  subtitle: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Services';
+          }
+        | {
+            hero: {
+              title: string;
+              title_2: string;
+              sub_title: string;
+              hero_2_image: string | Media;
+              id?: string | null;
+            }[];
+            button_one: string;
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'heroThree';
+          }
+        | {
+            services_3: {
+              title: string;
+              sub_title: string;
+              icon: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Service_3';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            description: string;
+            image: string | Media;
+            test_text: string;
+            button_one: string;
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'About_2';
+          }
+        | {
+            servicesData: {
+              title: string;
+              sub_title: string;
+              icon: string;
+              button_text: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ServiceArea_2';
+          }
+        | {
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'NavbarThree';
+          }
+        | {
+            title: string;
+            buttonText: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Help_Service';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            team?:
+              | {
+                  teamMemberImage?: string | Media | null;
+                  role: string;
+                  name: string;
+                  socialMedia?:
+                    | {
+                        socialMediaName: string;
+                        socialMediaLink: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_Team_section';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            AboutUsVideoUrl: string;
+            tab?:
+              | {
+                  tabTitle: string;
+                  tabDescription: string;
+                  tabUrl: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Home1_AboutUs';
+          }
       )[]
     | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

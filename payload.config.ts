@@ -2,6 +2,7 @@
 import { env } from '@env'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { resendAdapter } from '@payloadcms/email-resend'
+import { seoPlugin } from '@payloadcms/plugin-seo'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { s3Storage } from '@payloadcms/storage-s3'
 import path from 'path'
@@ -15,6 +16,12 @@ import { Pages } from '@/collections/Pages'
 import { Users } from '@/collections/Users'
 import Icon from '@/components/payload-icons/Icon'
 import Logo from '@/components/payload-icons/Logo'
+import {
+  generateDescription,
+  generateImage,
+  generateTitle,
+  generateURL,
+} from '@/utils/seo'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -33,6 +40,38 @@ export default buildConfig({
         Icon,
       },
     },
+    livePreview: {
+      url: ({ data, collectionConfig, locale }) => {
+        const baseUrl = env.NEXT_PUBLIC_PUBLIC_URL
+
+        if (collectionConfig?.slug === 'blogs') {
+          return `${baseUrl}/blog/${data.slug}`
+        } else {
+          return `${baseUrl}/${data.slug}${locale ? `?locale=${locale.code}` : ''}`
+        }
+      },
+      collections: ['pages', 'blogs'],
+      breakpoints: [
+        {
+          label: 'Mobile',
+          name: 'mobile',
+          width: 375,
+          height: 667,
+        },
+        {
+          label: 'Tablet',
+          name: 'tablet',
+          width: 768,
+          height: 1024,
+        },
+        {
+          label: 'Desktop',
+          name: 'desktop',
+          width: 1440,
+          height: 900,
+        },
+      ],
+    },
   },
   collections: [Users, Media, Blogs, Pages],
   plugins: [
@@ -49,6 +88,15 @@ export default buildConfig({
         },
         region: env.S3_REGION,
       },
+    }),
+    seoPlugin({
+      collections: ['blogs'],
+      uploadsCollection: 'media',
+      tabbedUI: true,
+      generateTitle,
+      generateDescription,
+      generateImage,
+      generateURL,
     }),
   ],
 
