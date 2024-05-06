@@ -1,5 +1,15 @@
 // This is just to consolidate all the existing blocks and it's respective jsx
 // Always prefer to individually import, the required block or jsx
+
+import BrandArea from './BrandArea'
+import { BrandArea_Block } from './BrandArea/block'
+import FunfactArea from './FunfactArea'
+import { FunfactArea_Block } from './FunfactArea/block'
+
+import TeamSection from './TeamSection'
+import { TeamSection_Block } from './TeamSection/block'
+
+
 import AboutUs_2 from '@/blocks/About_2'
 import { About_2_Block } from '@/blocks/About_2/block'
 import HelpService from '@/blocks/Help_Services'
@@ -26,9 +36,15 @@ import { Test1_1_Block } from '@/blocks/Test1_1/block'
 import Home1AboutUs from './Home1_AboutUs'
 import { Home1_AboutUs_Block } from './Home1_AboutUs/block'
 
+
 export const blocksJSX = {
   Test1_1: Test1_1,
   Page1: Page1,
+
+  BrandArea: BrandArea,
+  FunfactArea: FunfactArea,
+  TeamSection: TeamSection,
+
   Home1_Banner: Home1Banner,
   Home1_Services: Home1ServicesArea,
   heroThree: Hero_3,
@@ -40,6 +56,7 @@ export const blocksJSX = {
   Home1_Help_Service: HelpService,
   Home1_Team_section: Home1_Team_section,
   Home1AboutUs: Home1AboutUs,
+
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -47,6 +64,11 @@ export type SlugType = keyof typeof blocksJSX
 export const blocks = {
   Test1_1: Test1_1_Block,
   Page1_Block: Page1_Block,
+
+  BrandArea_Block: BrandArea_Block,
+  FunfactArea_Block: FunfactArea_Block,
+  TeamSection_Block: TeamSection_Block,
+
   Home1_Banner_Block: Home1_Banner_Block,
   Home1_Services_Block: Home1_Services_Block,
   heroThree: HeroThree_Block,
@@ -59,4 +81,5 @@ export const blocks = {
   Home1_AboutUs: Home1_AboutUs_Block,
 
   // PriceCalc_2_Block: PriceCalc_2_Block,
+
 }
