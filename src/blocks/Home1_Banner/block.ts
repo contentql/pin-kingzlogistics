@@ -3,6 +3,7 @@ import { Block } from 'payload/types'
 //schema
 export const Home1_Banner_Block: Block = {
   slug: 'Home1_Banner',
+  interfaceName: 'Home1_Banner',
   // imageURL: './page.PNG',
   labels: {
     singular: 'Home1 Banner Block',

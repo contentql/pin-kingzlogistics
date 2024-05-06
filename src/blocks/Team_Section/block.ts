@@ -3,6 +3,7 @@ import { Block } from 'payload/types'
 //schema
 export const Home1_Team_section_Block: Block = {
   slug: 'Home1_Team_section',
+  interfaceName: 'Home1_Team_section',
   // imageURL: './page.PNG',
   labels: {
     singular: 'Home1 Team section Block',
