@@ -36,6 +36,16 @@ export const HeroThree_Block: Block = {
       ],
     },
     {
+      name: 'hero_2_image',
+      label: 'Image',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+      admin: {
+        description: 'Upload Image',
+      },
+    },
+    {
       name: 'button_one',
       label: 'Button One',
       type: 'text',

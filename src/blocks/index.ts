@@ -20,6 +20,7 @@ export const blocksJSX = {
   Service_3: Service_3,
   About_2: AboutUs_2,
   ServiceArea_2: ServicesAreaTwo,
+  // PriceCalc_2: PriceCalcArea_2,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -31,4 +32,5 @@ export const blocks = {
   Service_3: Service_3_Block,
   About_2_Block: About_2_Block,
   ServiceArea_2_Block: ServiceArea_2_Block,
+  // PriceCalc_2_Block: PriceCalc_2_Block,
 }

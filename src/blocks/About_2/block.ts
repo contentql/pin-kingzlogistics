@@ -27,6 +27,22 @@ export const About_2_Block: Block = {
       required: true,
     },
     {
+      name: 'image',
+      label: 'Image',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+      admin: {
+        description: 'Upload Image',
+      },
+    },
+    {
+      name: 'test_text',
+      label: 'Test Text',
+      type: 'text',
+      required: true,
+    },
+    {
       name: 'button_one',
       label: 'Button Text',
       type: 'text',

@@ -1,12 +1,9 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
-const AboutUs_2 = ({
-  title,
-  sub_title,
-  description,
-  button_one,
-  button_two,
-}: any) => {
+const AboutUs_2 = (data: any) => {
+  console.log('data', data)
+  const { title, sub_title, description, button_one, button_two, image } = data
   return (
     <section className='about__3 about__gray-bg p-relative pt-120 pb-60'>
       <div className='container'>
@@ -15,18 +12,16 @@ const AboutUs_2 = ({
           data-wow-duration='1.5s'
           data-wow-delay='.3s'>
           <div className='col-xl-6 col-lg-6'>
-            {/* <div className='about__3-img-wrapper p-relative mb-60'>
+            <div className='about__3-img-wrapper p-relative mb-60'>
               <div className='about__3-top w-img'>
-                <Image
-                  src={about_img_2}
-                  style={{ width: '100%', height: 'auto' }}
-                  alt={'About'}
-                />
+                <Image src={image.url} width={100} height={100} alt={'About'} />
               </div>
               <div className='about__3-main w-img'>
                 <Image
-                  src={about_img_3}
-                  style={{ width: '100%', height: 'auto' }}
+                  src={image.url}
+                  width={100}
+                  height={460}
+                  objectFit='cover'
                   alt={'About'}
                 />
               </div>
@@ -36,7 +31,7 @@ const AboutUs_2 = ({
                 </span>
                 <h4 className='about__3-title'>25 Years of experience</h4>
               </div>
-            </div> */}
+            </div>
           </div>
           <div className='col-xl-6 col-lg-6'>
             <div className='about__3-content mb-60'>

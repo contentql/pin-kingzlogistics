@@ -124,6 +124,7 @@ export interface Page {
               sub_title: string;
               id?: string | null;
             }[];
+            hero_2_image: string | Media;
             button_one: string;
             button_two: string;
             id?: string | null;
@@ -145,6 +146,8 @@ export interface Page {
             title: string;
             sub_title: string;
             description: string;
+            image: string | Media;
+            test_text: string;
             button_one: string;
             button_two: string;
             id?: string | null;

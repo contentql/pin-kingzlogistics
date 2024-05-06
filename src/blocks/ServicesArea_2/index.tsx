@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 const ServicesAreaTwo = ({ servicesData }: any) => {
-  console.log(servicesData)
   return (
     <section className='services__3 grey-bg-4 pt-120 pb-90'>
       <div className='container'>
