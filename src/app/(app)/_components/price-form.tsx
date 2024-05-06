@@ -3,11 +3,11 @@
 import NiceSelect from '../_ui/niceSelect'
 
 const PriceFrom = () => {
-  const handleSubmit = e => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefualt()
   }
 
-  const selectHandler = e => {}
+  const selectHandler = (e: React.SyntheticEvent<HTMLFormElement>) => {}
   return (
     <form onSubmit={handleSubmit}>
       <div className='row'>

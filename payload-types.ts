@@ -122,9 +122,9 @@ export interface Page {
               title: string;
               title_2: string;
               sub_title: string;
+              hero_2_image: string | Media;
               id?: string | null;
             }[];
-            hero_2_image: string | Media;
             button_one: string;
             button_two: string;
             id?: string | null;
@@ -165,6 +165,12 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'ServiceArea_2';
+          }
+        | {
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'NavbarThree';
           }
       )[]
     | null;

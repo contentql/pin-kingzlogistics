@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import 'swiper/css/bundle'
 
 import Provider from '@/trpc/Provider'
 

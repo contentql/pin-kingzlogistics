@@ -1,34 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import 'swiper/css/bundle'
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
-const bannerData = [
-  {
-    id: 4,
-    text: 'welcome to our cargo agency',
-    banner_title: 'Transport Anything',
-    title_two: 'From Anywhere.',
-  },
-  {
-    id: 5,
-    text: 'welcome to our cargo agency',
-    banner_title: 'Transport Business',
-    title_two: 'is Movement.',
-  },
-  {
-    id: 6,
-    text: 'welcome to our cargo agency',
-    banner_title: 'Transport Business',
-    title_two: 'is Movement.',
-  },
-]
-
-// const swiper = new Swiper('.swiper', {
-//   modules: [Navigation, Pagination, Autoplay, EffectFade],
-// })
 
 const Hero_3 = ({ hero, button_one, button_two }: any) => {
   return (
