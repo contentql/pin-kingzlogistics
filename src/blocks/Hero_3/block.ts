@@ -33,18 +33,19 @@ export const HeroThree_Block: Block = {
           type: 'text',
           required: true,
         },
+        {
+          name: 'hero_2_image',
+          label: 'Image',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+          admin: {
+            description: 'Upload Image',
+          },
+        },
       ],
     },
-    {
-      name: 'hero_2_image',
-      label: 'Image',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-      admin: {
-        description: 'Upload Image',
-      },
-    },
+
     {
       name: 'button_one',
       label: 'Button One',

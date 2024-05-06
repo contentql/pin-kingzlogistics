@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const AboutUs_2 = (data: any) => {
-  console.log('data', data)
   const { title, sub_title, description, button_one, button_two, image } = data
   return (
     <section className='about__3 about__gray-bg p-relative pt-120 pb-60'>
