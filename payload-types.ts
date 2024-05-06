@@ -122,6 +122,61 @@ export interface Page {
             blockName?: string | null;
             blockType: 'page1';
           }
+        | {
+            hero: {
+              title: string;
+              title_2: string;
+              sub_title: string;
+              hero_2_image: string | Media;
+              id?: string | null;
+            }[];
+            button_one: string;
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'heroThree';
+          }
+        | {
+            services_3: {
+              title: string;
+              sub_title: string;
+              icon: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Service_3';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            description: string;
+            image: string | Media;
+            test_text: string;
+            button_one: string;
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'About_2';
+          }
+        | {
+            servicesData: {
+              title: string;
+              sub_title: string;
+              icon: string;
+              button_text: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ServiceArea_2';
+          }
+        | {
+            button_two: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'NavbarThree';
+          }
       )[]
     | null;
   updatedAt: string;
