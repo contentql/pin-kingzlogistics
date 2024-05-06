@@ -2,6 +2,7 @@ import { Block } from 'payload/types'
 
 export const NavbarThree_Block: Block = {
   slug: 'NavbarThree',
+  interfaceName: 'NavbarThree',
   // imageURL: '',
   imageURL: './page.PNG',
   labels: {
