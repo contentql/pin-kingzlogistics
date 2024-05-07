@@ -4,6 +4,8 @@ import AboutUs_2 from '@/blocks/About_2'
 import { About_2_Block } from '@/blocks/About_2/block'
 import BrandArea from '@/blocks/BrandArea'
 import { BrandArea_Block } from '@/blocks/BrandArea/block'
+import ContactInfoArea from '@/blocks/ContactInfoArea_2'
+import { ContactInfoArea_2_Block } from '@/blocks/ContactInfoArea_2/block'
 import FunfactArea from '@/blocks/FunfactArea'
 import { FunfactArea_Block } from '@/blocks/FunfactArea/block'
 import HelpService from '@/blocks/Help_Services'
@@ -22,6 +24,8 @@ import Page1 from '@/blocks/Page1'
 import { Page1_Block } from '@/blocks/Page1/block'
 import PortfolioArea from '@/blocks/PortfolioArea_2'
 import { PortfolioArea_Block } from '@/blocks/PortfolioArea_2/block'
+import ServiceCta from '@/blocks/ServiceCta_2'
+import { ServiceCta_2_Block } from '@/blocks/ServiceCta_2/block'
 import Service_3 from '@/blocks/Service_3'
 import { Service_3_Block } from '@/blocks/Service_3/block'
 import ServicesAreaTwo from '@/blocks/ServicesArea_2'
@@ -53,6 +57,8 @@ export const blocksJSX = {
   Home1_Team_section: Home1_Team_section,
   Home1AboutUs: Home1AboutUs,
   PortfolioArea_2: PortfolioArea,
+  ServiceCta_2: ServiceCta,
+  ContactInfoArea_2: ContactInfoArea,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -76,6 +82,8 @@ export const blocks = {
   Home1_Team_section: Home1_Team_section_Block,
   Home1_AboutUs: Home1_AboutUs_Block,
   PortfolioArea_2: PortfolioArea_Block,
+  ServiceCta_2: ServiceCta_2_Block,
+  ContactInfoArea_2: ContactInfoArea_2_Block,
 
   // PriceCalc_2_Block: PriceCalc_2_Block,
 }

@@ -17,7 +17,7 @@ const funFactList = [
 ]
 
 const Counter: any = dynamic(
-  () => import('@/app/(app)/_components/counter/CountUpContent'),
+  () => import('@/app/(app)/_components/common/counter/CountUpContent'),
   {
     ssr: false,
   },
