@@ -37,7 +37,6 @@ import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
 import Test1_1 from '@/blocks/Test1_1'
 import { Test1_1_Block } from '@/blocks/Test1_1/block'
 
-
 import BlogSectionTwo from './BlogSection_2'
 import { BlogSectionTwo_Block } from './BlogSection_2/block'
 import FooterThree from './Footer-3'
@@ -46,18 +45,8 @@ import HeroTwo from './Hero-2'
 import { Hero_2_Block } from './Hero-2/block'
 import PriceCtaArea from './PriceCtaArea-2'
 import { PriceCtaArea_Block } from './PriceCtaArea-2/block'
-
-import BrandArea from './BrandArea'
-import { BrandArea_Block } from './BrandArea/block'
-import FunfactArea from './FunfactArea'
-import { FunfactArea_Block } from './FunfactArea/block'
-import Home1AboutUs from './Home1_AboutUs'
-import { Home1_AboutUs_Block } from './Home1_AboutUs/block'
 import ProcessThree from './Process_3'
 import { ProcessThree_Block } from './Process_3/block'
-import TeamSection from './TeamSection'
-import { TeamSection_Block } from './TeamSection/block'
-
 
 export const blocksJSX = {
   Test1_1: Test1_1,
@@ -120,5 +109,4 @@ export const blocks = {
 
   // PriceCalc_2_Block: PriceCalc_2_Block,
   ProcessThree_Block: ProcessThree_Block,
-
 }
