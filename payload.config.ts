@@ -11,6 +11,7 @@ import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 
 import { Blogs } from '@/collections/Blogs'
+import { Globals } from '@/collections/Globals'
 import { Media } from '@/collections/Media'
 import { Pages } from '@/collections/Pages'
 import { Users } from '@/collections/Users'
@@ -73,7 +74,7 @@ export default buildConfig({
       ],
     },
   },
-  collections: [Users, Media, Blogs, Pages],
+  collections: [Users, Media, Blogs, Pages, Globals],
   plugins: [
     s3Storage({
       collections: {

@@ -12,6 +12,7 @@ export interface Config {
     media: Media;
     blogs: Blog;
     pages: Page;
+    globals: Global;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
@@ -393,6 +394,19 @@ export interface ProcessThree {
   id?: string | null;
   blockName?: string | null;
   blockType: 'ProcessThree';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "globals".
+ */
+export interface Global {
+  id: string;
+  name: string;
+  slug: string;
+  layout?: NavbarThree[] | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
