@@ -1,5 +1,6 @@
 'use client'
 
+import { Hero_2, Media } from '@payload-types'
 import Link from 'next/link'
 import {
   A11y,
@@ -11,9 +12,7 @@ import {
 //swiper style
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import bannerData from '@/mockData/banner-data'
-
-const HeroTwo = () => {
+const HeroTwo = (Hero_2_data: Hero_2) => {
   return (
     <section className='banner-area banner-area3 pos-rel'>
       <div className='slider__active-3'>
@@ -37,14 +36,14 @@ const HeroTwo = () => {
               nextEl: '.slider-button-prev',
               prevEl: '.slider-button-next',
             }}>
-            {bannerData.slice(0, 3).map(item => (
-              <SwiperSlide key={item.id}>
+            {Hero_2_data?.hero?.slice(0, 3)?.map((item, index) => (
+              <SwiperSlide key={index}>
                 <div>
                   <div className='single-banner banner-overlay-3 single-banner-3 d-flex align-items-center banner-840'>
                     <div
                       className='banner-bg banner-bg3'
                       style={{
-                        backgroundImage: `url(${item.image.src})`,
+                        backgroundImage: `url(${(item?.hero_2_image as Media)?.url || ''})`,
                       }}></div>
                     <div className='container pos-rel'>
                       <div className='row align-items-center justify-content-center'>
@@ -54,13 +53,13 @@ const HeroTwo = () => {
                               className='banner-meta-text bdevs-el-subtitle'
                               data-animation='fadeInUp'
                               data-delay='.3s'>
-                              <span>{item.subtitle}</span>
+                              <span>{item?.sub_title}</span>
                             </div>
                             <h1
                               className='banner-title bdevs-el-title'
                               data-animation='fadeInUp'
                               data-delay='.5s'>
-                              {item.title} <br /> {item.title_2}
+                              {item?.title_1} <br /> {item?.title_2}
                             </h1>
                             <div
                               className='banner-btn justify-content-center'
@@ -69,12 +68,12 @@ const HeroTwo = () => {
                               <Link
                                 href='/contact'
                                 className='fill-btn clip-btn bdevs-el-btn'>
-                                Get Estimation
+                                {Hero_2_data?.button_one}
                               </Link>
                               <Link
                                 href='/services'
                                 className='skew-btn bdevs-el-sec-btn'>
-                                Our Services
+                                {Hero_2_data?.button_two}
                               </Link>
                             </div>
                           </div>

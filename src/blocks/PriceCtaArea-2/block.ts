@@ -1,7 +1,7 @@
 import { Block } from 'payload/types'
 
 export const PriceCtaArea_Block: Block = {
-  slug: 'PriceCtaArea-2',
+  slug: 'PriceCtaArea_2',
   // imageURL: '',
   interfaceName: 'PriceCtaArea_2',
   labels: {

@@ -1,6 +1,6 @@
 import NiceSelect from './niceSelect'
 
-const PriceFrom = () => {
+const PriceFrom = ({ button_text }: { button_text: string }) => {
   const handleSubmit = (e: any) => {
     e.preventDefualt()
   }
@@ -69,7 +69,7 @@ const PriceFrom = () => {
       <div className='col-lx-12'>
         <div className='price__cta-btn'>
           <button type='submit' className='fill-btn clip-sm-btn d-block'>
-            Submit Now
+            {button_text}
           </button>
         </div>
       </div>
