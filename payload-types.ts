@@ -284,7 +284,25 @@ export interface ServiceArea_2 {
  * via the `definition` "NavbarThree".
  */
 export interface NavbarThree {
+  title: string;
+  button_one: string;
   button_two: string;
+  menus?:
+    | {
+        menu_name: string;
+        menu_link: string;
+        has_drop_down: boolean;
+        sub_menu_name?: string | null;
+        sub_menu_link?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  facebook: string;
+  youtube: string;
+  twitter: string;
+  email: string;
+  phone: string;
+  address: string;
   id?: string | null;
   blockName?: string | null;
   blockType: 'NavbarThree';
