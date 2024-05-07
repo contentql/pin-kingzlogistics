@@ -1,40 +1,25 @@
 'use client'
 
-import footer_icon from '@styles/assets/img/footer/footer-icon-img.png'
-import gallery_1 from '@styles/assets/img/gallery/gallery-10.jpg'
-import gallery_2 from '@styles/assets/img/gallery/gallery-11.jpg'
-import gallery_3 from '@styles/assets/img/gallery/gallery-12.jpg'
-import gallery_4 from '@styles/assets/img/gallery/gallery-13.jpg'
-import gallery_5 from '@styles/assets/img/gallery/gallery-14.jpg'
-import gallery_6 from '@styles/assets/img/gallery/gallery-15.jpg'
-import Image from 'next/image'
+import { Footer_3, Media } from '@payload-types'
 import Link from 'next/link'
 
-const FooterThree = () => {
-  const portfolio_img = [
+const FooterThree = (Footer_3Data: Footer_3) => {
+  const listOfIcons = [
     {
-      id: 1,
-      image: gallery_1,
+      href: 'https://www.facebook.com/',
+      icon: 'fab fa-facebook-f',
     },
     {
-      id: 2,
-      image: gallery_2,
+      href: 'https://twitter.com/',
+      icon: 'fab fa-twitter',
     },
     {
-      id: 3,
-      image: gallery_3,
+      href: 'https://www.behance.net/',
+      icon: 'fab fa-behance',
     },
     {
-      id: 4,
-      image: gallery_4,
-    },
-    {
-      id: 5,
-      image: gallery_5,
-    },
-    {
-      id: 6,
-      image: gallery_6,
+      href: 'https://www.youtube.com/',
+      icon: 'fab fa-youtube',
     },
   ]
   const handleSubmit = (event: any) => {
@@ -48,35 +33,18 @@ const FooterThree = () => {
             <div className='col-lg-4 col-xl-3 col-md-6 col-sm-6'>
               <div className='footer-widget footer1-widget1 mb-50 pr-20'>
                 <div className='footer-widget-title'>
-                  <h4>about us</h4>
+                  <h4>{Footer_3Data?.heading_1}</h4>
                 </div>
-                <p className='mb-40'>
-                  A farm is a plot of land that is used to grow crops and raise
-                  livestock, as in our farm, we raise sheep and sell their wool
-                  the word farm is also.
-                </p>
+                <p className='mb-40'>{Footer_3Data?.description_1}</p>
                 <div className='footer-social-link'>
                   <ul>
-                    <li>
-                      <Link href='https://www.facebook.com/'>
-                        <i className='fab fa-facebook-f'></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='https://twitter.com/'>
-                        <i className='fab fa-twitter'></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='https://www.behance.net/'>
-                        <i className='fab fa-behance'></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='https://www.youtube.com/'>
-                        <i className='fab fa-youtube'></i>
-                      </Link>
-                    </li>
+                    {listOfIcons.map((item, index) => (
+                      <li key={index}>
+                        <Link href={listOfIcons[index]?.href}>
+                          <i className={listOfIcons[index]?.icon}></i>
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -84,39 +52,22 @@ const FooterThree = () => {
             <div className='col-lg-4 col-xl-3 col-md-6 col-sm-6'>
               <div className='footer-widget footer1-widget2 mb-50 pl-10'>
                 <div className='footer-widget-title'>
-                  <h4>other pages</h4>
+                  <h4>{Footer_3Data?.heading_2}</h4>
                 </div>
                 <div className='footer-widget-link'>
                   <ul>
-                    <li>
-                      <Link href='/about-us'>About Us</Link>
-                    </li>
-                    <li>
-                      <Link href='/services'>Services</Link>
-                    </li>
-                    <li>
-                      <Link href='/team'>Our Team</Link>
-                    </li>
-                    <li>
-                      <Link href='/pricing'>Pricing</Link>
-                    </li>
-                    <li>
-                      <Link href='/faq'>FAQ &amp; Ans</Link>
-                    </li>
+                    {Footer_3Data?.links_1?.map((link, index) => (
+                      <li key={index}>
+                        <Link href='/about-us'>{link?.link}</Link>
+                      </li>
+                    ))}
                   </ul>
                   <ul>
-                    <li>
-                      <Link href='/career'>Careers</Link>
-                    </li>
-                    <li>
-                      <Link href='/blog'>News &amp; Insights</Link>
-                    </li>
-                    <li>
-                      <Link href='/faq'>Refund Policy</Link>
-                    </li>
-                    <li>
-                      <Link href='#'>Terms &amp; Conditions</Link>
-                    </li>
+                    {Footer_3Data?.links_2.map((link, index) => (
+                      <li key={index}>
+                        <Link href='/career'>{link?.link}</Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -124,12 +75,9 @@ const FooterThree = () => {
             <div className='col-lg-4 col-xl-3 col-md-6 col-sm-6'>
               <div className='footer-widget footer1-widget3 mb-50 pr-45'>
                 <div className='footer-widget-title'>
-                  <h4>Subscribe us</h4>
+                  <h4>{Footer_3Data?.heading_3}</h4>
                 </div>
-                <p className='mb-20'>
-                  Subscribe us &amp; receive our office &amp; update in your
-                  inbox directly
-                </p>
+                <p className='mb-20'>{Footer_3Data?.description_2}</p>
                 <form
                   onSubmit={handleSubmit}
                   action='#'
@@ -138,21 +86,21 @@ const FooterThree = () => {
                     <input type='text' placeholder='Enter your email' />
                     <i className='fas fa-envelope'></i>
                   </div>
-                  <button type='submit'>Subscribe Now</button>
+                  <button type='submit'>{Footer_3Data?.button_text}</button>
                 </form>
               </div>
             </div>
             <div className='col-lg-4 col-xl-3 col-md-6 col-sm-6'>
               <div className='footer-widget footer1-widget4 mb-50'>
                 <div className='footer-widget-title'>
-                  <h4>photo gallery</h4>
+                  <h4>{Footer_3Data?.heading_4}</h4>
                 </div>
                 <div className='footer-photo-gallery'>
-                  {portfolio_img.slice(0, 6).map(item => (
-                    <div className='footer-photo-item' key={item.id}>
-                      <Link href={`/portfolio-details/${item.id}`}>
-                        <Image
-                          src={item.image}
+                  {Footer_3Data?.images?.map((image, index) => (
+                    <div className='footer-photo-item' key={index}>
+                      <Link href={`/portfolio-details/${index + 1}`}>
+                        <img
+                          src={(image?.image as Media)?.url || ''}
                           style={{ width: '100%', height: 'auto' }}
                           alt='gallery'
                         />
@@ -175,22 +123,21 @@ const FooterThree = () => {
                     <div className='footer-menu mb-15'>
                       <nav>
                         <ul>
-                          <li>
-                            <Link href='#'>terms & conditions</Link>
-                          </li>
-                          <li>
-                            <Link href='/faq'>FAQ</Link>
-                          </li>
-                          <li>
-                            <Link href='/career'>careers</Link>
-                          </li>
+                          {Footer_3Data?.links_3?.map((link, index) => (
+                            <li key={index}>
+                              <Link href='#'>{link?.link}</Link>
+                            </li>
+                          ))}
                         </ul>
                       </nav>
                     </div>
                   </div>
                   <div className='col-xxl-5 col-lg-7'>
                     <div className='footer-brand m-img mb-15 text-center text-lg-end'>
-                      <Image src={footer_icon} alt='footer icon' />
+                      <img
+                        src={(Footer_3Data?.footer_image as Media)?.url || ''}
+                        alt='footer icon'
+                      />
                     </div>
                   </div>
                 </div>
@@ -202,11 +149,11 @@ const FooterThree = () => {
           <div className='container'>
             <div className='copy-right-text text-center'>
               <p>
-                Copyright & design by{' '}
+                {Footer_3Data?.copyright_text}{' '}
                 <Link href='https://themeforest.net/user/bdevs/portfolio?gclid=EAIaIQobChMIhYCnudmz_wIVWRxyCh2NoQvLEAAYASAAEgJTaPD_BwE'>
-                  @bdevs
+                  {Footer_3Data?.copyright_text_link}
                 </Link>{' '}
-                - 2022
+                - {Footer_3Data?.copyright_year}
               </p>
             </div>
           </div>

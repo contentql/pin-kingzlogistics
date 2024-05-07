@@ -1,9 +1,29 @@
-import Image from 'next/image'
+import { Media, PortfolioArea as PortfolioAreaType } from '@payload-types'
 import Link from 'next/link'
 
-import PortfolioData from '@/mockData/portfolio-data'
+const PortfolioData = [
+  //home and home-2 data
+  {
+    daynamic_class: 'col-xl-4 col-lg-6 col-md-6 c1 c3',
+  },
+  {
+    daynamic_class: 'col-xl-4 col-lg-6 col-md-6 c1 c4 c2',
+  },
+  {
+    daynamic_class: 'col-xl-4 col-lg-6 col-md-6 c2 c3',
+  },
+  {
+    daynamic_class: 'col-xl-4 col-lg-6 col-md-6 c1 c4 c2',
+  },
+  {
+    daynamic_class: 'col-xl-4 col-lg-6 col-md-6 c4 c1',
+  },
+  {
+    daynamic_class: 'col-xl-4 col-lg-6 col-md-6 c2 c3',
+  },
+]
 
-const PortfolioArea = () => {
+const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
   return (
     <section className='portfolio__area pt-115 pb-60'>
       <div
@@ -13,8 +33,8 @@ const PortfolioArea = () => {
         <div className='row align-items-center'>
           <div className='col-lg-4'>
             <div className='section__title gallery-section-title mb-55'>
-              <span className='sub-title'>Our recent work</span>
-              <h2 className='title'>Work showcase</h2>
+              <span className='sub-title'>{PortfolioAreaData?.tag}</span>
+              <h2 className='title'>{PortfolioAreaData?.title}</h2>
             </div>
           </div>
           <div className='col-lg-8'>
@@ -30,7 +50,7 @@ const PortfolioArea = () => {
                     role='tab'
                     aria-controls='nav-home'
                     aria-selected='true'>
-                    View All
+                    {PortfolioAreaData?.button_1}
                   </button>
                   <button
                     className='nav-link'
@@ -41,7 +61,7 @@ const PortfolioArea = () => {
                     role='tab'
                     aria-controls='nav-forwarding'
                     aria-selected='false'>
-                    Freight Forwarding
+                    {PortfolioAreaData?.button_2}
                   </button>
                   <button
                     className='nav-link'
@@ -52,7 +72,7 @@ const PortfolioArea = () => {
                     role='tab'
                     aria-controls='nav-contact'
                     aria-selected='false'>
-                    Transport Management
+                    {PortfolioAreaData?.button_3}
                   </button>
                   <button
                     className='nav-link'
@@ -63,7 +83,7 @@ const PortfolioArea = () => {
                     role='tab'
                     aria-controls='nav-wordpress'
                     aria-selected='false'>
-                    Materials
+                    {PortfolioAreaData?.button_4}
                   </button>
                   <button
                     className='nav-link'
@@ -74,7 +94,7 @@ const PortfolioArea = () => {
                     role='tab'
                     aria-controls='nav-webdesign'
                     aria-selected='false'>
-                    Warehouse
+                    {PortfolioAreaData?.button_5}
                   </button>
                 </div>
               </nav>
@@ -89,13 +109,15 @@ const PortfolioArea = () => {
             aria-labelledby='nav-home-tab'
             tabIndex={0}>
             <div className='row grid mb-30'>
-              {PortfolioData.slice(0, 6).map(item => (
-                <div className={item.daynamic_class} key={item.id}>
+              {PortfolioAreaData?.portfolios?.map((item, index) => (
+                <div
+                  className={PortfolioData[index]?.daynamic_class}
+                  key={index}>
                   <div className='portfolio__item mb-30'>
                     <div className='dp-single-gallery'>
                       <div className='dp-gallery-thumb'>
-                        <Image
-                          src={item.image}
+                        <img
+                          src={(item?.image as Media)?.url || ''}
                           alt='gallery-image'
                           style={{ width: '100%', height: 'auto' }}
                         />
@@ -103,14 +125,14 @@ const PortfolioArea = () => {
                       <div className='dp-gallery-content'>
                         <div className='dp-gallery-content-text'>
                           <h4 className='dp-gallery-title'>
-                            <Link href={`/portfolio-details/${item.id}`}>
-                              {item.title}
+                            <Link href={`/portfolio-details/${index + 1}`}>
+                              {item?.title}
                             </Link>
                           </h4>
-                          <span>{item.subTitle}</span>
+                          <span>{item?.sub_title}</span>
                         </div>
                         <div className='dp-gallery-link'>
-                          <Link href={`/portfolio-details/${item.id}`}>
+                          <Link href={`/portfolio-details/${index + 1}`}>
                             <i className='fal fa-long-arrow-right'></i>
                           </Link>
                         </div>
@@ -119,174 +141,6 @@ const PortfolioArea = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-          <div
-            className='tab-pane fade'
-            id='nav-profile'
-            role='tabpanel'
-            aria-labelledby='nav-profile-tab'
-            tabIndex={0}>
-            <div className='row grid mb-30'>
-              {PortfolioData.slice(0, 6).map(
-                item =>
-                  item.forwarding && (
-                    <div className={item.daynamic_class} key={item.id}>
-                      <div className='portfolio__item mb-30'>
-                        <div className='dp-single-gallery'>
-                          <div className='dp-gallery-thumb'>
-                            <Image
-                              src={item.image}
-                              alt='gallery-image'
-                              style={{ width: '100%', height: 'auto' }}
-                            />
-                          </div>
-                          <div className='dp-gallery-content'>
-                            <div className='dp-gallery-content-text'>
-                              <h4 className='dp-gallery-title'>
-                                <Link href={`/portfolio-details/${item.id}`}>
-                                  {item.title}
-                                </Link>
-                              </h4>
-                              <span>{item.subTitle}</span>
-                            </div>
-                            <div className='dp-gallery-link'>
-                              <Link href={`/portfolio-details/${item.id}`}>
-                                <i className='fal fa-long-arrow-right'></i>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ),
-              )}
-            </div>
-          </div>
-          <div
-            className='tab-pane fade'
-            id='nav-contact'
-            role='tabpanel'
-            aria-labelledby='nav-contact-tab'
-            tabIndex={0}>
-            <div className='row grid mb-30'>
-              {PortfolioData.slice(0, 6).map(
-                item =>
-                  item.management && (
-                    <div className={item.daynamic_class} key={item.id}>
-                      <div className='portfolio__item mb-30'>
-                        <div className='dp-single-gallery'>
-                          <div className='dp-gallery-thumb'>
-                            <Image
-                              src={item.image}
-                              alt='gallery-image'
-                              style={{ width: '100%', height: 'auto' }}
-                            />
-                          </div>
-                          <div className='dp-gallery-content'>
-                            <div className='dp-gallery-content-text'>
-                              <h4 className='dp-gallery-title'>
-                                <Link href={`/portfolio-details/${item.id}`}>
-                                  {item.title}
-                                </Link>
-                              </h4>
-                              <span>{item.subTitle}</span>
-                            </div>
-                            <div className='dp-gallery-link'>
-                              <Link href={`/portfolio-details/${item.id}`}>
-                                <i className='fal fa-long-arrow-right'></i>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ),
-              )}
-            </div>
-          </div>
-          <div
-            className='tab-pane fade'
-            id='nav-wordpress'
-            role='tabpanel'
-            aria-labelledby='nav-wordpress-tab'
-            tabIndex={0}>
-            <div className='row grid mb-30'>
-              {PortfolioData.slice(0, 6).map(
-                item =>
-                  item.materials && (
-                    <div className={item.daynamic_class} key={item.id}>
-                      <div className='portfolio__item mb-30'>
-                        <div className='dp-single-gallery'>
-                          <div className='dp-gallery-thumb'>
-                            <Image
-                              src={item.image}
-                              alt='gallery-image'
-                              style={{ width: '100%', height: 'auto' }}
-                            />
-                          </div>
-                          <div className='dp-gallery-content'>
-                            <div className='dp-gallery-content-text'>
-                              <h4 className='dp-gallery-title'>
-                                <Link href={`/portfolio-details/${item.id}`}>
-                                  {item.title}
-                                </Link>
-                              </h4>
-                              <span>{item.subTitle}</span>
-                            </div>
-                            <div className='dp-gallery-link'>
-                              <Link href={`/portfolio-details/${item.id}`}>
-                                <i className='fal fa-long-arrow-right'></i>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ),
-              )}
-            </div>
-          </div>
-          <div
-            className='tab-pane fade'
-            id='nav-webdesign'
-            role='tabpanel'
-            aria-labelledby='nav-webdesign-tab'
-            tabIndex={0}>
-            <div className='row grid mb-30'>
-              {PortfolioData.slice(0, 6).map(
-                item =>
-                  item.warhouse && (
-                    <div className={item.daynamic_class} key={item.id}>
-                      <div className='portfolio__item mb-30'>
-                        <div className='dp-single-gallery'>
-                          <div className='dp-gallery-thumb'>
-                            <Image
-                              src={item.image}
-                              alt='gallery-image'
-                              style={{ width: '100%', height: 'auto' }}
-                            />
-                          </div>
-                          <div className='dp-gallery-content'>
-                            <div className='dp-gallery-content-text'>
-                              <h4 className='dp-gallery-title'>
-                                <Link href={`/portfolio-details/${item.id}`}>
-                                  {item.title}
-                                </Link>
-                              </h4>
-                              <span>{item.subTitle}</span>
-                            </div>
-                            <div className='dp-gallery-link'>
-                              <Link href={`/portfolio-details/${item.id}`}>
-                                <i className='fal fa-long-arrow-right'></i>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ),
-              )}
             </div>
           </div>
         </div>

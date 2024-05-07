@@ -1,61 +1,38 @@
-import canada_flag from '@styles/assets/img/contact/canada-flag.png'
-import india_flag from '@styles/assets/img/contact/india-flag.jpg'
-import russia_flag from '@styles/assets/img/contact/russia-flag.png'
-import uk_flag from '@styles/assets/img/contact/uk-flag.png'
-import usa_flag from '@styles/assets/img/contact/usa-flag.png'
-import Image from 'next/image'
+import { ContactIfoArea_2, Media } from '@payload-types'
 import Link from 'next/link'
 
-const ContactInfoArea = () => {
+const ContactInfoArea = (ContactIfoArea_2_Data: ContactIfoArea_2) => {
   const contact_data = [
     {
-      id: 1,
-      image: uk_flag,
       style: 'dot dot-1',
     },
     {
-      id: 2,
-      image: usa_flag,
       style: 'dot dot-2 active',
     },
     {
-      id: 3,
-      image: russia_flag,
       style: 'dot dot-3',
     },
     {
-      id: 4,
-      image: canada_flag,
       style: 'dot dot-4',
     },
     {
-      id: 5,
-      image: india_flag,
       style: 'dot dot-5',
     },
   ]
 
   const contact__info = [
     {
-      id: 1,
-      text: 'Call us now',
       contact: 'tel:32622266600',
-      option: '326 222 666 00',
       icon: 'flaticon-telephone-call',
     },
     {
-      id: 2,
-      text: 'Email us',
       contact: 'mailto:info@webdow.com',
-      option: 'info@webdow.com',
+
       icon: 'flaticon-envelope',
     },
     {
-      id: 3,
-      text: '12/a, new huq tower',
       contact:
         'https://www.google.com/maps/search/12%2FA,+New+Boston+Hall/@42.5515021,-79.7879305,7z/data=!3m1!4b1',
-      option: 'new york, usa',
       icon: 'flaticon-pin',
     },
   ]
@@ -71,20 +48,15 @@ const ContactInfoArea = () => {
             <div className='col-lg-5'>
               <div className='contact__content'>
                 <div className='section__title'>
-                  <span className='sub-title'>contact us</span>
-                  <h2 className='title'>
-                    nearest locations to <br /> learn your delivery <br />{' '}
-                    process easy.
-                  </h2>
+                  <span className='sub-title'>
+                    {ContactIfoArea_2_Data?.tag}
+                  </span>
+                  <h2 className='title'>{ContactIfoArea_2_Data?.title}</h2>
                 </div>
-                <p className='mb-45'>
-                  From finance, retail, and travel, to social media,
-                  cybersecurity, adtech, and more, market leaders are leveraging
-                  web data to maintain their transt advantage.
-                </p>
+                <p className='mb-45'>{ContactIfoArea_2_Data?.description}</p>
                 <div className='contact__content-btn'>
                   <Link href='/contact' className='fill-btn'>
-                    get direction
+                    {ContactIfoArea_2_Data?.button_text}
                   </Link>
                 </div>
               </div>
@@ -92,12 +64,14 @@ const ContactInfoArea = () => {
             <div className='col-lg-5'>
               <div className='coverage__map p-relative wow slideInUp'>
                 <div className='dot-main'>
-                  {contact_data.map(item => (
-                    <div className='dot-main-item' key={item.id}>
-                      <div className={item.style}>
+                  {ContactIfoArea_2_Data?.flag_images?.map((item, index) => (
+                    <div className='dot-main-item' key={index}>
+                      <div className={contact_data[index]?.style}>
                         <div className='dot-content p-relative'>
                           <div className='dot-inner'>
-                            <Image src={item.image} alt='contact img'></Image>
+                            <img
+                              src={(item?.flag_image as Media)?.url || ''}
+                              alt='contact img'></img>
                           </div>
                         </div>
                       </div>
@@ -110,18 +84,20 @@ const ContactInfoArea = () => {
         </div>
         <div className='contact__info'>
           <div className='row'>
-            {contact__info.map(item => (
-              <div className='col-xl-4 col-lg-4 col-md-6' key={item.id}>
+            {ContactIfoArea_2_Data?.contact_information?.map((item, index) => (
+              <div className='col-xl-4 col-lg-4 col-md-6' key={index}>
                 <div className='contact__shadow'>
                   <div className='contact__info-item mb-30'>
                     <div className='contact__info-text'>
-                      <span>{item.text}</span>
+                      <span>{item?.title}</span>
                       <h3>
-                        <Link href={item.contact}>{item.option}</Link>
+                        <Link href={contact__info[index]?.contact}>
+                          {item?.sub_title}
+                        </Link>
                       </h3>
                     </div>
                     <div className='contact__info-icon'>
-                      <i className={item.icon}></i>
+                      <i className={contact__info[index]?.icon}></i>
                     </div>
                   </div>
                 </div>
