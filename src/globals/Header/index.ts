@@ -1,14 +1,13 @@
-import { Block } from 'payload/types'
+import { GlobalConfig } from 'payload/types'
 
-export const NavbarThree_Block: Block = {
+export const NavbarThree_Block: GlobalConfig = {
   slug: 'NavbarThree',
-  interfaceName: 'NavbarThree',
-  // imageURL: '',
-  imageURL: './page.PNG',
-  labels: {
-    singular: 'NavbarThree Block',
-    plural: 'NavbarThree Blocks',
-  },
+  //   interfaceName: 'NavbarThree',
+  //   imageURL: './page.PNG',
+  //   labels: {
+  //     singular: 'NavbarThree Block',
+  //     plural: 'NavbarThree Blocks',
+  //   },
   fields: [
     {
       name: 'banner',

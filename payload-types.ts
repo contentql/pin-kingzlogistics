@@ -12,11 +12,13 @@ export interface Config {
     media: Media;
     blogs: Blog;
     pages: Page;
-    globals: Global;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  globals: {};
+  globals: {
+    Footer_3: Footer_3;
+    NavbarThree: NavbarThree;
+  };
   locale: null;
   user: User & {
     collection: 'users';
@@ -397,19 +399,6 @@ export interface ProcessThree {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "globals".
- */
-export interface Global {
-  id: string;
-  name: string;
-  slug: string;
-  layout?: NavbarThree[] | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
@@ -441,6 +430,42 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Footer_3".
+ */
+export interface Footer_3 {
+  id: string;
+  heading_1: string;
+  description_1: string;
+  heading_2: string;
+  links_1: {
+    link: string;
+    id?: string | null;
+  }[];
+  links_2: {
+    link: string;
+    id?: string | null;
+  }[];
+  heading_3: string;
+  description_2: string;
+  button_text: string;
+  heading_4: string;
+  images: {
+    image: string | Media;
+    id?: string | null;
+  }[];
+  links_3: {
+    link: string;
+    id?: string | null;
+  }[];
+  footer_image: string | Media;
+  copyright_text: string;
+  copyright_text_link: string;
+  copyright_year: number;
+  updatedAt?: string | null;
+  createdAt?: string | null;
 }
 
 
