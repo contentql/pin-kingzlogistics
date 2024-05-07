@@ -16,6 +16,8 @@ import { Pages } from '@/collections/Pages'
 import { Users } from '@/collections/Users'
 import Icon from '@/components/payload-icons/Icon'
 import Logo from '@/components/payload-icons/Logo'
+import { FooterThree_Block } from '@/globals/Footer'
+import { NavbarThree_Block } from '@/globals/Header'
 import {
   generateDescription,
   generateImage,
@@ -40,8 +42,41 @@ export default buildConfig({
         Icon,
       },
     },
+    livePreview: {
+      url: ({ data, collectionConfig, locale }) => {
+        const baseUrl = env.NEXT_PUBLIC_PUBLIC_URL
+
+        if (collectionConfig?.slug === 'blogs') {
+          return `${baseUrl}/blog/${data.slug}`
+        } else {
+          return `${baseUrl}/${data.slug}${locale ? `?locale=${locale.code}` : ''}`
+        }
+      },
+      collections: ['pages', 'blogs'],
+      breakpoints: [
+        {
+          label: 'Mobile',
+          name: 'mobile',
+          width: 375,
+          height: 667,
+        },
+        {
+          label: 'Tablet',
+          name: 'tablet',
+          width: 768,
+          height: 1024,
+        },
+        {
+          label: 'Desktop',
+          name: 'desktop',
+          width: 1440,
+          height: 900,
+        },
+      ],
+    },
   },
   collections: [Users, Media, Blogs, Pages],
+  globals: [FooterThree_Block, NavbarThree_Block],
   plugins: [
     s3Storage({
       collections: {

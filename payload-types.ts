@@ -15,7 +15,10 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  globals: {};
+  globals: {
+    Footer_3: Footer_3;
+    Navbar_3: Navbar_3;
+  };
   locale: null;
   user: User & {
     collection: 'users';
@@ -122,10 +125,429 @@ export interface Page {
             blockName?: string | null;
             blockType: 'page1';
           }
+        | BrandArea
+        | FunfactArea
+        | TeamSection
+        | Home1_Banner
+        | Home1_Services
+        | HeroThree
+        | Service_3
+        | About_2
+        | ServiceArea_2
+        | NavbarThree
+        | Home1_Help_Service
+        | Home1_TeamSection
+        | Home1_AboutUs
+        | PortfolioArea
+        | ServiceCta_2
+        | ContactIfoArea_2
+        | BlogSection_2
+        | Footer_3
+        | Hero_2
+        | PriceCtaArea_2
+        | ProcessThree
       )[]
     | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BrandArea".
+ */
+export interface BrandArea {
+  brands: {
+    brand_image: string | Media;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'BrandArea';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FunfactArea".
+ */
+export interface FunfactArea {
+  funfacts: {
+    number: number;
+    title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'FunfactArea';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TeamSection".
+ */
+export interface TeamSection {
+  team_experts: {
+    expert_image: string | Media;
+    designation: string;
+    expert_name: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'TeamSection';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Banner".
+ */
+export interface Home1_Banner {
+  title: string;
+  banner_image?: string | Media | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Banner';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Services".
+ */
+export interface Home1_Services {
+  title: string;
+  subtitle: string;
+  services?:
+    | {
+        serviceIcon?: string | Media | null;
+        title: string;
+        subtitle: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Services';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "heroThree".
+ */
+export interface HeroThree {
+  hero: {
+    title: string;
+    title_2: string;
+    sub_title: string;
+    hero_2_image: string | Media;
+    id?: string | null;
+  }[];
+  button_one: string;
+  button_two: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'heroThree';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Service_3".
+ */
+export interface Service_3 {
+  services_3: {
+    title: string;
+    sub_title: string;
+    icon: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Service_3';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "About_2".
+ */
+export interface About_2 {
+  title: string;
+  sub_title: string;
+  description: string;
+  image: string | Media;
+  projects_done: number;
+  star_rating: number;
+  years_of_experience: number;
+  button_one: string;
+  button_two: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'About_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceArea_2".
+ */
+export interface ServiceArea_2 {
+  servicesData: {
+    title: string;
+    sub_title: string;
+    icon: string;
+    button_text: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ServiceArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "NavbarThree".
+ */
+export interface NavbarThree {
+  banner: string;
+  logo: string | Media;
+  button_one: string;
+  button_two: string;
+  menu?:
+    | {
+        menu_name: string;
+        menu_link: string;
+        has_drop_down?: boolean | null;
+        sub_menu?:
+          | {
+              sub_menu_name: string;
+              sub_menu_link: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  facebook: string;
+  twitter: string;
+  instagram: string;
+  youtube: string;
+  phone: string;
+  email: string;
+  address: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'NavbarThree';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Help_Service".
+ */
+export interface Home1_Help_Service {
+  title: string;
+  buttonText: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Help_Service';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_Team_section".
+ */
+export interface Home1_TeamSection {
+  title: string;
+  subtitle: string;
+  team?:
+    | {
+        teamMemberImage?: string | Media | null;
+        role: string;
+        name: string;
+        socialMedia?:
+          | {
+              socialMediaName: string;
+              socialMediaLink: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_Team_section';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_AboutUs".
+ */
+export interface Home1_AboutUs {
+  title: string;
+  subtitle: string;
+  AboutUsVideoUrl: string;
+  tab?:
+    | {
+        tabTitle: string;
+        tabDescription: string;
+        tabUrl: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_AboutUs';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PortfolioArea".
+ */
+export interface PortfolioArea {
+  tag: string;
+  title: string;
+  button_1: string;
+  button_2: string;
+  button_3: string;
+  button_4: string;
+  button_5: string;
+  portfolios: {
+    image: string | Media;
+    title: string;
+    sub_title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'PortfolioArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceCta_2".
+ */
+export interface ServiceCta_2 {
+  title: string;
+  button_1: string;
+  button_2: string;
+  background_image: string | Media;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ServiceCta_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactIfoArea_2.".
+ */
+export interface ContactIfoArea_2 {
+  tag: string;
+  title: string;
+  description: string;
+  button_text: string;
+  flag_images: {
+    flag_image: string | Media;
+    id?: string | null;
+  }[];
+  contact_information: {
+    title: string;
+    sub_title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ContactInfoArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BlogSection_2".
+ */
+export interface BlogSection_2 {
+  tag: string;
+  title: string;
+  blogs: {
+    blog_image: string | Media;
+    date: number;
+    month: string;
+    number_of_comments: number;
+    author: string;
+    title: string;
+    sub_title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'BlogSection_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Footer_3".
+ */
+export interface Footer_3 {
+  heading_1: string;
+  description_1: string;
+  heading_2: string;
+  links_1: {
+    link: string;
+    id?: string | null;
+  }[];
+  links_2: {
+    link: string;
+    id?: string | null;
+  }[];
+  heading_3: string;
+  description_2: string;
+  button_text: string;
+  heading_4: string;
+  images: {
+    image: string | Media;
+    id?: string | null;
+  }[];
+  links_3: {
+    link: string;
+    id?: string | null;
+  }[];
+  footer_image: string | Media;
+  copyright_text: string;
+  copyright_text_link: string;
+  copyright_year: number;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Footer_3';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Hero_2".
+ */
+export interface Hero_2 {
+  hero: {
+    sub_title: string;
+    title_1: string;
+    title_2: string;
+    hero_2_image: string | Media;
+    id?: string | null;
+  }[];
+  button_one: string;
+  button_two: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Hero_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PriceCtaArea_2".
+ */
+export interface PriceCtaArea_2 {
+  background_image: string | Media;
+  tag: string;
+  title: string;
+  button_text: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'PriceCtaArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ProcessThree".
+ */
+export interface ProcessThree {
+  title: string;
+  sub_title: string;
+  button_one: string;
+  image: string | Media;
+  video_id: string;
+  steps?:
+    | {
+        title: string;
+        description: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ProcessThree';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -160,6 +582,41 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Navbar_3".
+ */
+export interface Navbar_3 {
+  id: string;
+  banner: string;
+  logo: string | Media;
+  button_one: string;
+  button_two: string;
+  menu?:
+    | {
+        menu_name: string;
+        menu_link: string;
+        has_drop_down?: boolean | null;
+        sub_menu?:
+          | {
+              sub_menu_name: string;
+              sub_menu_link: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  facebook: string;
+  twitter: string;
+  instagram: string;
+  youtube: string;
+  phone: string;
+  email: string;
+  address: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
 }
 
 
