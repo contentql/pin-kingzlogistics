@@ -16,6 +16,8 @@ import { Pages } from '@/collections/Pages'
 import { Users } from '@/collections/Users'
 import Icon from '@/components/payload-icons/Icon'
 import Logo from '@/components/payload-icons/Logo'
+import { FooterThree_Block } from '@/globals/Footer'
+import { NavbarThree_Block } from '@/globals/Header'
 import {
   generateDescription,
   generateImage,
@@ -74,6 +76,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Blogs, Pages],
+  globals: [FooterThree_Block, NavbarThree_Block],
   plugins: [
     s3Storage({
       collections: {

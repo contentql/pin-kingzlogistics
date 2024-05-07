@@ -15,7 +15,10 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  globals: {};
+  globals: {
+    Footer_3: Footer_3;
+    Navbar_3: Navbar_3;
+  };
   locale: null;
   user: User & {
     collection: 'users';
@@ -579,6 +582,77 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Footer_3".
+ */
+export interface Footer_3 {
+  id: string;
+  heading_1: string;
+  description_1: string;
+  heading_2: string;
+  links_1: {
+    link: string;
+    id?: string | null;
+  }[];
+  links_2: {
+    link: string;
+    id?: string | null;
+  }[];
+  heading_3: string;
+  description_2: string;
+  button_text: string;
+  heading_4: string;
+  images: {
+    image: string | Media;
+    id?: string | null;
+  }[];
+  links_3: {
+    link: string;
+    id?: string | null;
+  }[];
+  footer_image: string | Media;
+  copyright_text: string;
+  copyright_text_link: string;
+  copyright_year: number;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Navbar_3".
+ */
+export interface Navbar_3 {
+  id: string;
+  banner: string;
+  logo: string | Media;
+  button_one: string;
+  button_two: string;
+  menu?:
+    | {
+        menu_name: string;
+        menu_link: string;
+        has_drop_down?: boolean | null;
+        sub_menu?:
+          | {
+              sub_menu_name: string;
+              sub_menu_link: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  facebook: string;
+  twitter: string;
+  instagram: string;
+  youtube: string;
+  phone: string;
+  email: string;
+  address: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
 }
 
 
