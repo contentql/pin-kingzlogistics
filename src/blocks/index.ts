@@ -37,6 +37,9 @@ import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
 import Test1_1 from '@/blocks/Test1_1'
 import { Test1_1_Block } from '@/blocks/Test1_1/block'
 
+import BlogSectionTwo from './BlogSection_2'
+import { BlogSectionTwo_Block } from './BlogSection_2/block'
+
 export const blocksJSX = {
   Test1_1: Test1_1,
   Page1: Page1,
@@ -59,6 +62,7 @@ export const blocksJSX = {
   PortfolioArea_2: PortfolioArea,
   ServiceCta_2: ServiceCta,
   ContactInfoArea_2: ContactInfoArea,
+  BlogSection_2: BlogSectionTwo,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -84,6 +88,7 @@ export const blocks = {
   PortfolioArea_2: PortfolioArea_Block,
   ServiceCta_2: ServiceCta_2_Block,
   ContactInfoArea_2: ContactInfoArea_2_Block,
+  BlogSectionTwo: BlogSectionTwo_Block,
 
   // PriceCalc_2_Block: PriceCalc_2_Block,
 }
