@@ -12,7 +12,8 @@ const PriceCtaArea = (PriceCtaArea_2_data: PriceCtaArea_2) => {
         <Image
           src={(PriceCtaArea_2_data?.background_image as Media)?.url || ''}
           alt='cta'
-          style={{ width: '100%', height: '100%' }}
+          // style={{ width: '100%', height: '100%' }}
+          fill
         />
       </div>
       <div className='container'>
