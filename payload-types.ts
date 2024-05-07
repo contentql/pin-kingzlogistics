@@ -140,6 +140,8 @@ export interface Page {
         | ContactIfoArea_2
         | BlogSection_2
         | Footer_3
+        | Hero_2
+        | PriceCtaArea_2
       )[]
     | null;
   updatedAt: string;
@@ -463,6 +465,37 @@ export interface Footer_3 {
   id?: string | null;
   blockName?: string | null;
   blockType: 'Footer_3';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Hero_2".
+ */
+export interface Hero_2 {
+  hero: {
+    sub_title: string;
+    title_1: string;
+    title_2: string;
+    hero_2_image: string | Media;
+    id?: string | null;
+  }[];
+  button_one: string;
+  button_two: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Hero_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PriceCtaArea_2".
+ */
+export interface PriceCtaArea_2 {
+  background_image: string | Media;
+  tag: string;
+  title: string;
+  button_text: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'PriceCtaArea-2';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

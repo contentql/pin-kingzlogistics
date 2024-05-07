@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from 'react'
-import { useClickAway } from 'react-use'
+import useClickAway from 'react-use/lib/useClickAway'
 
 const NiceSelect = ({
   options,

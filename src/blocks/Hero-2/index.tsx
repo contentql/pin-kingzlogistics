@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import 'swiper/css/bundle'
 import {
   A11y,
   Autoplay,
