@@ -91,27 +91,25 @@ const menu_data = [
   },
 ]
 
-const Menus = () => {
+const Menus = ({ menus }: any) => {
   return (
     <ul>
-      {menu_data.map((menu, i) => (
+      {menus.map((menu: any, i: number) => (
         <li
           key={i}
-          className={` ${
-            menu.megaMenu ? 'menu-item-has-children has-mega-menu' : ''
-          } ${menu.hasDropdown ? 'menu-item-has-children' : ''}`}>
-          <Link href={menu.link}>{menu.title}</Link>
-          {menu.hasDropdown && (
+          className={` ${menu.has_drop_down ? 'menu-item-has-children' : ''}`}>
+          <Link href={menu.menu_link}>{menu.menu_name}</Link>
+          {menu.has_drop_down && (
             <ul className='sub-menu'>
-              {menu.submenus?.map((sub, i) => (
+              {menu.sub_menu?.map((sub: any, i: number) => (
                 <li key={i}>
-                  <Link href={sub.link}>{sub.title}</Link>
+                  <Link href={sub.sub_menu_link}>{sub.sub_menu_name}</Link>
                 </li>
               ))}
             </ul>
           )}
 
-          {menu.mega_menus && (
+          {/* {menu.mega_menus && (
             <ul className='sub-menu'>
               {menu.mega_menus &&
                 menu?.mega_menus?.map((mega, i) => (
@@ -131,7 +129,7 @@ const Menus = () => {
                   </li>
                 ))}
             </ul>
-          )}
+          )} */}
         </li>
       ))}
     </ul>

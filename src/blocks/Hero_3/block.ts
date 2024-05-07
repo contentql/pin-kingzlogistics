@@ -40,7 +40,7 @@ export const HeroThree_Block: Block = {
           relationTo: 'media',
           required: true,
           admin: {
-            description: 'Upload Image',
+            description: 'Upload Hero Image',
           },
         },
       ],
@@ -51,12 +51,18 @@ export const HeroThree_Block: Block = {
       label: 'Button One',
       type: 'text',
       required: true,
+      admin: {
+        description: 'Button One Name',
+      },
     },
     {
       name: 'button_two',
       label: 'Button Two',
       type: 'text',
       required: true,
+      admin: {
+        description: 'Button Two Name',
+      },
     },
   ],
 }

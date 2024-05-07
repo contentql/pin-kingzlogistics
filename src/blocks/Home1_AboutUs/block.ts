@@ -43,7 +43,7 @@ export const Home1_AboutUs_Block: Block = {
         {
           name: 'tabDescription',
           label: 'Tab Description',
-          type: 'text',
+          type: 'textarea',
           required: true,
         },
         {

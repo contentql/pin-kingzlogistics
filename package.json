@@ -34,6 +34,7 @@
     "@trpc/next": "next",
     "@trpc/react-query": "next",
     "@trpc/server": "next",
+    "@types/react-modal-video": "^1.2.3",
     "bootstrap": "5.3.3",
     "cross-env": "^7.0.3",
     "i": "^0.3.7",
@@ -43,11 +44,8 @@
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
-
     "react-intersection-observer": "^9.10.2",
-
     "react-modal-video": "^2.0.1",
-
     "react-use": "^17.5.0",
     "sharp": "^0.32.6",
     "swiper": "^11.1.1",

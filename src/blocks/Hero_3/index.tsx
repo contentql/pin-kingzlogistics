@@ -1,10 +1,12 @@
 'use client'
 
+import { HeroThree } from '@payload-types'
 import Link from 'next/link'
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-const Hero_3 = ({ hero, button_one, button_two }: any) => {
+const Hero_3 = (data: HeroThree) => {
+  const { hero, button_one, button_two } = data
   return (
     <section className='banner-area banner-area1 pos-rel'>
       <div className='slider__active'>
@@ -26,8 +28,8 @@ const Hero_3 = ({ hero, button_one, button_two }: any) => {
               nextEl: '.slider-button-next',
               prevEl: '.slider-button-prev',
             }}>
-            {hero.map((item: any) => (
-              <SwiperSlide key={item.id}>
+            {hero.map((item: any, index: number) => (
+              <SwiperSlide key={index}>
                 <div>
                   <div className='single-banner banner-overlay single-banner-1 banner-830'>
                     <div

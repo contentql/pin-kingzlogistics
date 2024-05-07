@@ -23,7 +23,7 @@ export const About_2_Block: Block = {
     {
       name: 'description',
       label: 'Description',
-      type: 'text',
+      type: 'textarea',
       required: true,
     },
     {
@@ -33,13 +33,25 @@ export const About_2_Block: Block = {
       relationTo: 'media',
       required: true,
       admin: {
-        description: 'Upload Image',
+        description: 'Upload Aboutus Image',
       },
     },
     {
-      name: 'test_text',
-      label: 'Test Text',
-      type: 'text',
+      name: 'projects_done',
+      label: 'Projects Done',
+      type: 'number',
+      required: true,
+    },
+    {
+      name: 'star_rating',
+      label: 'Star Rating',
+      type: 'number',
+      required: true,
+    },
+    {
+      name: 'years_of_experience',
+      label: 'Years of Experience',
+      type: 'number',
       required: true,
     },
     {
