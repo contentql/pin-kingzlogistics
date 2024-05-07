@@ -14,6 +14,7 @@ const AboutUs_2 = (data: About_2) => {
     star_rating,
     years_of_experience,
   } = data
+
   return (
     <section className='about__3 about__gray-bg p-relative pt-120 pb-60'>
       <div className='container'>
@@ -25,6 +26,7 @@ const AboutUs_2 = (data: About_2) => {
             <div className='about__3-img-wrapper p-relative mb-60'>
               <div className='about__3-top w-img'>
                 <Image
+                  //@ts-ignore
                   src={image?.url}
                   width={100}
                   height={100}
@@ -33,6 +35,7 @@ const AboutUs_2 = (data: About_2) => {
               </div>
               <div className='about__3-main w-img'>
                 <Image
+                  //@ts-ignore
                   src={image?.url}
                   width={100}
                   height={460}

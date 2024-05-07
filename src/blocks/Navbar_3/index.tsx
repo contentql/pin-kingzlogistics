@@ -95,6 +95,8 @@ const Navbar_3 = (data: NavbarThree) => {
                   <div className='logo logo-transform'>
                     <Link href='/'>
                       <Image
+                        //@ts-ignore
+
                         src={logo?.url}
                         alt='Logo'
                         width={85}
@@ -163,6 +165,8 @@ const Navbar_3 = (data: NavbarThree) => {
                   <div className='logo d-none'>
                     <Link href='/'>
                       <Image
+                        //@ts-ignore
+
                         src={logo?.url}
                         alt='Logo'
                         width={85}
@@ -195,7 +199,14 @@ const Navbar_3 = (data: NavbarThree) => {
             <div className='col-xl-2 col-lg-2 col-3'>
               <div className='logo'>
                 <Link href='/'>
-                  <Image src={logo?.url} alt='Logo' width={85} height={30} />
+                  <Image
+                    //@ts-ignore
+
+                    src={logo?.url}
+                    alt='Logo'
+                    width={85}
+                    height={30}
+                  />
                 </Link>
               </div>
             </div>
