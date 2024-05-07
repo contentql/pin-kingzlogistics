@@ -11,201 +11,66 @@ export const NavbarThree_Block: Block = {
   },
   fields: [
     {
-      type: 'tabs',
-      tabs: [
+      name: 'title',
+      label: 'Title',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'button_one',
+      label: 'Button one',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'button_two',
+      label: 'Button two',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'menu',
+      label: 'Menu',
+      type: 'array',
+      fields: [
         {
-          label: 'Navbar Three',
-          description: 'Please provide details.',
-          fields: [
-            {
-              name: 'title',
-              label: 'Title',
-              type: 'text',
-              required: true,
-            },
-            {
-              name: 'button_one',
-              label: 'Button one',
-              type: 'text',
-              required: true,
-            },
-            {
-              name: 'button_two',
-              label: 'Button Two',
-              type: 'text',
-              required: true,
-            },
-          ],
+          name: 'menu_name',
+          label: 'Menu Name',
+          type: 'text',
+          required: true,
         },
         {
-          label: 'menus',
-          description: 'Please provide details.',
-          fields: [
-            {
-              name: 'menus',
-              label: 'Menus',
-              type: 'array',
-              fields: [
-                {
-                  name: 'menu_name',
-                  label: 'Menu Name',
-                  type: 'text',
-                  required: true,
-                },
-                {
-                  name: 'menu_link',
-                  label: 'Menu Link',
-                  type: 'text',
-                  required: true,
-                },
-                {
-                  name: 'has_drop_down',
-                  label: 'Has Drop Down',
-                  type: 'checkbox',
-                  defaultValue: true,
-                },
-                {
-                  // type: 'row',
-                  // fields: [
-                  //   {
-                  //     name: 'sub_menu',
-                  //     label: 'Sub Menu',
-                  //     type: 'array',
-                  //     admin: {
-                  //       description: 'Drop down menu',
-                  //       condition: data => {
-                  //         console.log(data)
-                  //         if (data.has_drop_down) {
-                  //           return true
-                  //         } else {
-                  //           return false
-                  //         }
-                  //       },
-                  //     },
-                  //     fields: [
-                  //       {
-                  //         name: 'sub_menu_name',
-                  //         label: 'Sub Menu Name',
-                  //         type: 'text',
-                  //         required: true,
-                  //       },
-                  //       {
-                  //         name: 'sub_menu_link',
-                  //         label: 'Sub Menu Link',
-                  //         type: 'text',
-                  //         required: true,
-                  //       },
-                  //     ],
-                  //   },
-                  // ],
-                  name: 'sub_menu',
-                  label: 'Sub Menu',
-                  type: 'array',
-                  admin: {
-                    description: 'Drop down menu',
-                    condition: (data, siblingData) => {
-                      console.log(data)
-                      if (data.has_drop_down) {
-                        return true
-                      } else {
-                        return false
-                      }
-                    },
-                  },
-                  fields: [
-                    {
-                      name: 'sub_menu_name',
-                      label: 'Sub Menu Name',
-                      type: 'text',
-                      required: true,
-                    },
-                    {
-                      name: 'sub_menu_link',
-                      label: 'Sub Menu Link',
-                      type: 'text',
-                      required: true,
-                    },
-                  ],
-                },
-
-                // {
-                //   name: 'sub_menu_name',
-                //   label: 'Sub Menu Name',
-                //   type: 'text',
-                //   required: true,
-                //   admin: {
-                //     condition: (data, siblingData) => {
-                //       console.log(data)
-                //       if (siblingData.has_drop_down) {
-                //         return true
-                //       } else {
-                //         return false
-                //       }
-                //     },
-                //   },
-                // },
-                // {
-                //   name: 'sub_menu_link',
-                //   label: 'Sub Menu Link',
-                //   type: 'text',
-                //   required: true,
-                //   admin: {
-                //     condition: (data, siblingData) => {
-                //       if (siblingData.has_drop_down) {
-                //         return true
-                //       } else {
-                //         return false
-                //       }
-                //     },
-                //   },
-                // },
-              ],
-            },
-          ],
+          name: 'menu_link',
+          label: 'Menu Link',
+          type: 'text',
+          required: true,
         },
         {
-          label: 'social',
-          description: 'Please provide details',
-          fields: [
-            {
-              name: 'facebook',
-              label: 'Facebook',
-              type: 'text',
-              required: true,
-            },
-            {
-              name: 'youtube',
-              label: 'YouTube',
-              type: 'text',
-              required: true,
-            },
-            {
-              name: 'twitter',
-              label: 'Twitter',
-              type: 'text',
-              required: true,
-            },
-          ],
+          name: 'has_drop_down',
+          label: 'Has Drop Down',
+          type: 'checkbox',
+          defaultValue: true,
         },
         {
-          label: 'contact',
-          description: 'Please provide details',
+          name: 'sub_menu',
+          label: 'Sub Menu',
+          type: 'array',
+          admin: {
+            condition: (data, siblingData) => {
+              console.log(siblingData)
+              return siblingData.has_drop_down ? true : false
+            },
+          },
           fields: [
             {
-              name: 'email',
-              label: 'Email',
+              name: 'sub_menu_name',
+              label: 'Sub Menu Name',
               type: 'text',
               required: true,
             },
             {
-              name: 'phone',
-              label: 'Phone',
-              type: 'text',
-              required: true,
-            },
-            {
-              name: 'address',
-              label: 'Address',
+              name: 'sub_menu_link',
+              label: 'Sub Menu Link',
               type: 'text',
               required: true,
             },
@@ -213,13 +78,47 @@ export const NavbarThree_Block: Block = {
         },
       ],
     },
+    {
+      name: 'facebook',
+      label: 'Facebook',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'twitter',
+      label: 'Twitter',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'instagram',
+      label: 'Instagram',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'youtube',
+      label: 'Youtube',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'phone',
+      label: 'Phone',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'email',
+      label: 'Email',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'address',
+      label: 'Address',
+      type: 'text',
+      required: true,
+    },
   ],
-  // fields: [
-  //   {
-  //     name: 'title',
-  //     label: 'Title',
-  //     type: 'text',
-  //     required: true,
-  //   },
-  // ],
 }

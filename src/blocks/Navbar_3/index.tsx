@@ -6,7 +6,8 @@ import Menus from '../../app/(app)/_components/menus'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const Navbar_3 = () => {
+const Navbar_3 = (data: any) => {
+  console.log(data)
   // Sticky Menu Area start
   useEffect(() => {
     window.addEventListener('scroll', sticky)

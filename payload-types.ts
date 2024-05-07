@@ -287,22 +287,21 @@ export interface NavbarThree {
   title: string;
   button_one: string;
   button_two: string;
-  menus?:
+  menu?:
     | {
         menu_name: string;
         menu_link: string;
-        has_drop_down: boolean;
-        sub_menu_name?: string | null;
-        sub_menu_link?: string | null;
+        has_drop_down?: boolean | null;
+        sub_menu?:
+          | {
+              sub_menu_name: string;
+              sub_menu_link: string;
+              id?: string | null;
+            }[]
+          | null;
         id?: string | null;
       }[]
     | null;
-  facebook: string;
-  youtube: string;
-  twitter: string;
-  email: string;
-  phone: string;
-  address: string;
   id?: string | null;
   blockName?: string | null;
   blockType: 'NavbarThree';
