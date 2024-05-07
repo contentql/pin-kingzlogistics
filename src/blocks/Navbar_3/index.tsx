@@ -1,13 +1,28 @@
 'use client'
 
+import OffCanvasMain from '../../app/(app)/_components/common/off-canvas'
 import Menus from '../../app/(app)/_components/menus'
+import { NavbarThree } from '@payload-types'
+import Image from 'next/image'
 // import Logo from '@assets/img/logo/logo.png'
-// import OffCanvasMain from '@components/common/off-canvas'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const Navbar_3 = (data: any) => {
-  console.log(data)
+const Navbar_3 = (data: NavbarThree) => {
+  const {
+    banner,
+    button_one,
+    button_two,
+    address,
+    email,
+    facebook,
+    instagram,
+    logo,
+    phone,
+    twitter,
+    youtube,
+    menu,
+  } = data
   // Sticky Menu Area start
   useEffect(() => {
     window.addEventListener('scroll', sticky)
@@ -33,7 +48,7 @@ const Navbar_3 = (data: any) => {
             <div className='col-xl-7 col-md-7'>
               <div className='header__text'>
                 <span className='uppercase'>
-                  We’re more than just transport.{' '}
+                  {banner}.{' '}
                   <b>
                     <Link href='/contact'>Free Counsultancy</Link>
                   </b>{' '}
@@ -44,22 +59,22 @@ const Navbar_3 = (data: any) => {
               <div className='header__social-link'>
                 <ul>
                   <li>
-                    <Link href='https://www.facebook.com/'>
+                    <Link href={facebook}>
                       <i className='fab fa-facebook-f'></i>
                     </Link>
                   </li>
                   <li>
-                    <Link href='https://twitter.com/'>
+                    <Link href={twitter}>
                       <i className='fab fa-twitter'></i>
                     </Link>
                   </li>
                   <li>
-                    <Link href='https://www.behance.net/'>
+                    <Link href={instagram}>
                       <i className='fab fa-behance'></i>
                     </Link>
                   </li>
                   <li>
-                    <Link href='https://www.youtube.com/'>
+                    <Link href={youtube}>
                       <i className='fab fa-youtube'></i>
                     </Link>
                   </li>
@@ -76,13 +91,14 @@ const Navbar_3 = (data: any) => {
               <div className='row align-items-center'>
                 <div className='col-xl-2 col-lg-2 col-md-2 col-9'>
                   <div className='logo logo-transform'>
-                    {/* <Link href='/'>
+                    <Link href='/'>
                       <Image
-                        src={Logo}
-                        style={{ width: 'auto', height: 'auto' }}
+                        src={logo?.url}
                         alt='Logo'
+                        width={85}
+                        height={30}
                       />
-                    </Link> */}
+                    </Link>
                   </div>
                 </div>
                 <div className='col-xl-10 col-lg-10 col-md-10 col-3'>
@@ -106,7 +122,7 @@ const Navbar_3 = (data: any) => {
                         <div className='header__info-text'>
                           <span>Call us now</span>
                           <h5>
-                            <Link href='tel:32622266600'>326 222 666 00</Link>
+                            <Link href='tel:32622266600'>{phone}</Link>
                           </h5>
                         </div>
                       </div>
@@ -117,9 +133,7 @@ const Navbar_3 = (data: any) => {
                         <div className='header__info-text'>
                           <span>Email now</span>
                           <h5>
-                            <Link href='mailto:info@webdow.com'>
-                              info@webdow.com
-                            </Link>
+                            <Link href='mailto:info@webdow.com'>{email}</Link>
                           </h5>
                         </div>
                       </div>
@@ -128,10 +142,10 @@ const Navbar_3 = (data: any) => {
                           <i className='flaticon-pin'></i>
                         </div>
                         <div className='header__info-text'>
-                          <span>12/A, New Boston Hall</span>
+                          <span>Location</span>
                           <h5>
                             <Link href='https://www.google.com/maps/search/12%2FA,+New+Boston+Hall/@42.5515021,-79.7879305,7z/data=!3m1!4b1'>
-                              New york, united states
+                              {address}
                             </Link>
                           </h5>
                         </div>
@@ -145,20 +159,21 @@ const Navbar_3 = (data: any) => {
               <div className='row d-flex justify-content-end align-items-center'>
                 <div className='col-xl-2 col-lg-2'>
                   <div className='logo d-none'>
-                    {/* <Link href='/'>
+                    <Link href='/'>
                       <Image
-                        src={Logo}
-                        style={{ width: 'auto', height: 'auto' }}
+                        src={logo?.url}
                         alt='Logo'
+                        width={85}
+                        height={30}
                       />
-                    </Link> */}
+                    </Link>
                   </div>
                 </div>
                 <div className='col-xl-10 col-lg-10'>
                   <div className='menu-wrapper menu-bg d-flex justify-content-between'>
                     <div className='main-menu main-menu-1'>
                       <nav id='mobile-menu'>
-                        <Menus />
+                        <Menus menus={menu} />
                       </nav>
                     </div>
                     <div className='menu-btn'>
@@ -177,21 +192,16 @@ const Navbar_3 = (data: any) => {
           <div className='row align-items-center'>
             <div className='col-xl-2 col-lg-2 col-3'>
               <div className='logo'>
-                {/* <Link href='/'>
-                  {' '}
-                  <Image
-                    src={Logo}
-                    style={{ width: 'auto', height: 'auto' }}
-                    alt='Logo'
-                  />
-                </Link> */}
+                <Link href='/'>
+                  <Image src={logo?.url} alt='Logo' width={85} height={30} />
+                </Link>
               </div>
             </div>
             <div className='col-xl-10 col-lg-10 col-9'>
               <div className='menu-wrapper menu-none d-flex align-items-center justify-content-between'>
                 <div className='main-menu main-menu-1'>
                   <nav>
-                    <Menus />
+                    <Menus menus={menu} />
                   </nav>
                 </div>
                 <div className='menu-btn'>
@@ -215,10 +225,11 @@ const Navbar_3 = (data: any) => {
       </div>
       {/* Sticky Menu Area End Here  
          Sidebar Area Start Here   */}
-      {/* <OffCanvasMain
+      <OffCanvasMain
         isOffCanvasOpen={isOffCanvasOpen}
         setIsOffCanvasOpen={setIsOffCanvasOpen}
-      /> */}
+        data={data}
+      />
     </header>
   )
 }

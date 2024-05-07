@@ -11,10 +11,23 @@ export const NavbarThree_Block: Block = {
   },
   fields: [
     {
-      name: 'title',
-      label: 'Title',
+      name: 'banner',
+      label: 'Banner',
       type: 'text',
       required: true,
+      admin: {
+        description: 'Enter the banner text to display',
+      },
+    },
+    {
+      name: 'logo',
+      label: 'Logo',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+      admin: {
+        description: 'Upload Logo',
+      },
     },
     {
       name: 'button_one',
@@ -83,25 +96,38 @@ export const NavbarThree_Block: Block = {
       label: 'Facebook',
       type: 'text',
       required: true,
+      admin: {
+        description: 'Enter the facebook link',
+      },
     },
     {
       name: 'twitter',
       label: 'Twitter',
       type: 'text',
       required: true,
+      admin: {
+        description: 'Enter the twitter link',
+      },
     },
     {
       name: 'instagram',
       label: 'Instagram',
       type: 'text',
       required: true,
+      admin: {
+        description: 'Enter the instagram link',
+      },
     },
     {
       name: 'youtube',
       label: 'Youtube',
       type: 'text',
       required: true,
+      admin: {
+        description: 'Enter the youtube link',
+      },
     },
+
     {
       name: 'phone',
       label: 'Phone',
@@ -111,7 +137,7 @@ export const NavbarThree_Block: Block = {
     {
       name: 'email',
       label: 'Email',
-      type: 'text',
+      type: 'email',
       required: true,
     },
     {

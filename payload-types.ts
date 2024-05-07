@@ -256,7 +256,9 @@ export interface About_2 {
   sub_title: string;
   description: string;
   image: string | Media;
-  test_text: string;
+  projects_done: number;
+  star_rating: number;
+  years_of_experience: number;
   button_one: string;
   button_two: string;
   id?: string | null;
@@ -284,7 +286,8 @@ export interface ServiceArea_2 {
  * via the `definition` "NavbarThree".
  */
 export interface NavbarThree {
-  title: string;
+  banner: string;
+  logo: string | Media;
   button_one: string;
   button_two: string;
   menu?:
@@ -302,6 +305,13 @@ export interface NavbarThree {
         id?: string | null;
       }[]
     | null;
+  facebook: string;
+  twitter: string;
+  instagram: string;
+  youtube: string;
+  phone: string;
+  email: string;
+  address: string;
   id?: string | null;
   blockName?: string | null;
   blockType: 'NavbarThree';
