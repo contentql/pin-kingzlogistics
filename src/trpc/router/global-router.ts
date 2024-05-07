@@ -27,7 +27,7 @@ export const getGlobals = router({
         throw new Error(error.message)
       }
     }),
-  getAllPages: publicProcedure.query(async () => {
+  getAllGlobals: publicProcedure.query(async () => {
     try {
       const { docs } = await payload.find({
         collection: 'globals',
