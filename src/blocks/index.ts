@@ -41,6 +41,10 @@ import BlogSectionTwo from './BlogSection_2'
 import { BlogSectionTwo_Block } from './BlogSection_2/block'
 import FooterThree from './Footer-3'
 import { FooterThree_Block } from './Footer-3/block'
+import HeroTwo from './Hero-2'
+import { Hero_2_Block } from './Hero-2/block'
+import PriceCtaArea from './PriceCtaArea-2'
+import { PriceCtaArea_Block } from './PriceCtaArea-2/block'
 
 export const blocksJSX = {
   Test1_1: Test1_1,
@@ -66,6 +70,8 @@ export const blocksJSX = {
   ContactInfoArea_2: ContactInfoArea,
   BlogSection_2: BlogSectionTwo,
   Footer_3: FooterThree,
+  Hero_2: HeroTwo,
+  PriceCtaArea_2: PriceCtaArea,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -93,6 +99,8 @@ export const blocks = {
   ContactInfoArea_2: ContactInfoArea_2_Block,
   BlogSectionTwo: BlogSectionTwo_Block,
   FooterThree: FooterThree_Block,
+  Hero_2: Hero_2_Block,
+  PriceCtaArea: PriceCtaArea_Block,
 
   // PriceCalc_2_Block: PriceCalc_2_Block,
 }
