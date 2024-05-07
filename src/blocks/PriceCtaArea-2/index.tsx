@@ -1,7 +1,6 @@
 'use client'
 
 import { Media, PriceCtaArea_2 } from '@payload-types'
-import Image from 'next/image'
 
 import PriceFrom from '@/app/(app)/_components/price-from'
 
@@ -9,11 +8,10 @@ const PriceCtaArea = (PriceCtaArea_2_data: PriceCtaArea_2) => {
   return (
     <section className='price__cta-3 price__cta3-bg p-relative'>
       <div className='price__cta-3-img d-none d-xl-block'>
-        <Image
+        <img
           src={(PriceCtaArea_2_data?.background_image as Media)?.url || ''}
           alt='cta'
-          // style={{ width: '100%', height: '100%' }}
-          fill
+          style={{ width: '100%', height: '100%' }}
         />
       </div>
       <div className='container'>
