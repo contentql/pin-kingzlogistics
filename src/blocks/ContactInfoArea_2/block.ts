@@ -1,12 +1,12 @@
 import { Block } from 'payload/types'
 
-export const PortfolioArea_Block: Block = {
-  slug: 'PortfolioArea',
+export const ContactInfoArea_2_Block: Block = {
+  slug: 'ContactInfoArea_2',
   // imageURL: '',
-  interfaceName: 'PortfolioArea',
+  interfaceName: 'ContactIfoArea_2.',
   labels: {
-    singular: 'PortfolioArea Block',
-    plural: 'PortfolioArea Blocks',
+    singular: 'ContactIfoArea_2 Block',
+    plural: 'ContactIfoArea_2 Blocks',
   },
   fields: [
     {
@@ -22,51 +22,41 @@ export const PortfolioArea_Block: Block = {
       required: true,
     },
     {
-      name: 'button_1',
-      label: 'Button 1',
+      name: 'description',
+      label: 'Description',
       type: 'text',
       required: true,
     },
     {
-      name: 'button_2',
-      label: 'Button 2',
+      name: 'button_text',
+      label: 'Button Text',
       type: 'text',
       required: true,
     },
     {
-      name: 'button_3',
-      label: 'Button 3',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'button_4',
-      label: 'Button 4',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'button_5',
-      label: 'Button 5',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'portfolios',
-      label: 'Portfolios',
-      required: true,
+      name: 'flag_images',
+      label: 'Flag Images',
       type: 'array',
+      required: true,
       fields: [
         {
-          name: 'image',
-          label: 'Image',
+          name: 'flag_image',
+          label: 'Flag Image',
           type: 'upload',
           relationTo: 'media',
           required: true,
           admin: {
-            description: 'image',
+            description: 'Flag image',
           },
         },
+      ],
+    },
+    {
+      name: 'contact_information',
+      label: 'Contact Information',
+      type: 'array',
+      required: true,
+      fields: [
         {
           name: 'title',
           label: 'Title',

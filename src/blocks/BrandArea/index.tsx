@@ -1,14 +1,12 @@
 'use client'
 
-import Image from 'next/image'
+import { BrandArea as BrandAreaType, Media } from '@payload-types'
 import Link from 'next/link'
 import { Autoplay } from 'swiper/modules'
 //swiper style
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import brandData from '@/mockData/brand-data'
-
-const BrandArea = () => {
+const BrandArea = (brandAreaData: BrandAreaType) => {
   return (
     <div className='brand__3 pt-70 pb-70'>
       <div className='container'>
@@ -47,13 +45,13 @@ const BrandArea = () => {
                   slidesPerView: 1,
                 },
               }}>
-              {brandData.slice(6, 12).map(item => (
-                <SwiperSlide key={item.id}>
+              {brandAreaData?.brands?.map((item, index) => (
+                <SwiperSlide key={index}>
                   <div>
                     <div className='brand__3-items'>
                       <Link href='#'>
-                        <Image
-                          src={item.image}
+                        <img
+                          src={(item?.brand_image as Media)?.url || ''}
                           style={{ width: 'auto', height: 'auto' }}
                           alt='Brand'
                         />
