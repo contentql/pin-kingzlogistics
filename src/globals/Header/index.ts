@@ -1,7 +1,7 @@
 import { GlobalConfig } from 'payload/types'
 
 export const NavbarThree_Block: GlobalConfig = {
-  slug: 'NavbarThree',
+  slug: 'Navbar_3',
   //   interfaceName: 'NavbarThree',
   //   imageURL: './page.PNG',
   //   labels: {

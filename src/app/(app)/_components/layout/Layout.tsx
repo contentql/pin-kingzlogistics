@@ -1,12 +1,15 @@
-// import RenderGlobals from '@/collections/Globals/RenderGlobals'
-// import { serverClient } from '@/trpc/serverClient'
+'use clinet'
 
-export default async function Layout({ children }: any) {
-  // const globalData = await serverClient.global.getGlobalData({ slug })
+// import Test1_1 from '@/blocks/Test1_1'
+import Navbar_3 from '@/blocks/Navbar_3'
+
+export default function GlobalLayout({ children, header, footer }: any) {
+  console.log('header', header)
   return (
-    <div>
-      {/* <RenderGlobals /> */}
+    <>
+      <Navbar_3 {...header} />
       {children}
-    </div>
+      {/* <Footer_3 {...footer} /> */}
+    </>
   )
 }

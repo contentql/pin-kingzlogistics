@@ -31,6 +31,8 @@ const Navbar_3 = (data: NavbarThree) => {
     }
   })
 
+  console.log('data', data)
+
   const sticky = (e: any) => {
     const header = document.querySelector('.menu-sticky')
     const scrollTop = window.scrollY

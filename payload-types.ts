@@ -17,7 +17,7 @@ export interface Config {
   };
   globals: {
     Footer_3: Footer_3;
-    NavbarThree: NavbarThree;
+    Navbar_3: Navbar_3;
   };
   locale: null;
   user: User & {
@@ -464,6 +464,41 @@ export interface Footer_3 {
   copyright_text: string;
   copyright_text_link: string;
   copyright_year: number;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Navbar_3".
+ */
+export interface Navbar_3 {
+  id: string;
+  banner: string;
+  logo: string | Media;
+  button_one: string;
+  button_two: string;
+  menu?:
+    | {
+        menu_name: string;
+        menu_link: string;
+        has_drop_down?: boolean | null;
+        sub_menu?:
+          | {
+              sub_menu_name: string;
+              sub_menu_link: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  facebook: string;
+  twitter: string;
+  instagram: string;
+  youtube: string;
+  phone: string;
+  email: string;
+  address: string;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
