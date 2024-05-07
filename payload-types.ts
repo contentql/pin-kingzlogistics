@@ -495,7 +495,7 @@ export interface PriceCtaArea_2 {
   button_text: string;
   id?: string | null;
   blockName?: string | null;
-  blockType: 'PriceCtaArea-2';
+  blockType: 'PriceCtaArea_2';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
