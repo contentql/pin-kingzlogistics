@@ -135,6 +135,11 @@ export interface Page {
         | Home1_Help_Service
         | Home1_TeamSection
         | Home1_AboutUs
+        | PortfolioArea
+        | ServiceCta_2
+        | ContactIfoArea_2
+        | BlogSection_2
+        | Footer_3
       )[]
     | null;
   updatedAt: string;
@@ -344,6 +349,120 @@ export interface Home1_AboutUs {
   id?: string | null;
   blockName?: string | null;
   blockType: 'Home1_AboutUs';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PortfolioArea".
+ */
+export interface PortfolioArea {
+  tag: string;
+  title: string;
+  button_1: string;
+  button_2: string;
+  button_3: string;
+  button_4: string;
+  button_5: string;
+  portfolios: {
+    image: string | Media;
+    title: string;
+    sub_title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'PortfolioArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceCta_2".
+ */
+export interface ServiceCta_2 {
+  title: string;
+  button_1: string;
+  button_2: string;
+  background_image: string | Media;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ServiceCta_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactIfoArea_2.".
+ */
+export interface ContactIfoArea_2 {
+  tag: string;
+  title: string;
+  description: string;
+  button_text: string;
+  flag_images: {
+    flag_image: string | Media;
+    id?: string | null;
+  }[];
+  contact_information: {
+    title: string;
+    sub_title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ContactInfoArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BlogSection_2".
+ */
+export interface BlogSection_2 {
+  tag: string;
+  title: string;
+  blogs: {
+    blog_image: string | Media;
+    date: number;
+    month: string;
+    number_of_comments: number;
+    author: string;
+    title: string;
+    sub_title: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'BlogSection_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Footer_3".
+ */
+export interface Footer_3 {
+  heading_1: string;
+  description_1: string;
+  heading_2: string;
+  links_1: {
+    link: string;
+    id?: string | null;
+  }[];
+  links_2: {
+    link: string;
+    id?: string | null;
+  }[];
+  heading_3: string;
+  description_2: string;
+  button_text: string;
+  heading_4: string;
+  images: {
+    image: string | Media;
+    id?: string | null;
+  }[];
+  links_3: {
+    link: string;
+    id?: string | null;
+  }[];
+  footer_image: string | Media;
+  copyright_text: string;
+  copyright_text_link: string;
+  copyright_year: number;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Footer_3';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
