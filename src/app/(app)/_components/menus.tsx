@@ -98,12 +98,14 @@ const Menus = ({ menus }: any) => {
         <li
           key={i}
           className={` ${menu.has_drop_down ? 'menu-item-has-children' : ''}`}>
-          <Link href={menu.menu_link}>{menu.menu_name}</Link>
+          <Link href={menu.menu_link || ''}>{menu.menu_name}</Link>
           {menu.has_drop_down && (
             <ul className='sub-menu'>
               {menu.sub_menu?.map((sub: any, i: number) => (
                 <li key={i}>
-                  <Link href={sub.sub_menu_link}>{sub.sub_menu_name}</Link>
+                  <Link href={sub.sub_menu_link || ''}>
+                    {sub.sub_menu_name}
+                  </Link>
                 </li>
               ))}
             </ul>

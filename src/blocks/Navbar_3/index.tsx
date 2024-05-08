@@ -61,22 +61,22 @@ const Navbar_3 = (data: NavbarThree) => {
               <div className='header__social-link'>
                 <ul>
                   <li>
-                    <Link href={facebook}>
+                    <Link href={facebook || ''}>
                       <i className='fab fa-facebook-f'></i>
                     </Link>
                   </li>
                   <li>
-                    <Link href={twitter}>
+                    <Link href={twitter || ''}>
                       <i className='fab fa-twitter'></i>
                     </Link>
                   </li>
                   <li>
-                    <Link href={instagram}>
+                    <Link href={instagram || ''}>
                       <i className='fab fa-behance'></i>
                     </Link>
                   </li>
                   <li>
-                    <Link href={youtube}>
+                    <Link href={youtube || ''}>
                       <i className='fab fa-youtube'></i>
                     </Link>
                   </li>

@@ -29,7 +29,7 @@ const MobileMenus = ({ menus }: any) => {
           <React.Fragment key={i}>
             {menu.has_drop_down && !menu.active && (
               <li className='menu-item-has-children'>
-                <Link href={menu.menu_link}>{menu.menu_name}</Link>
+                <Link href={menu.menu_link || ''}>{menu.menu_name}</Link>
                 <ul
                   className='sub-menu'
                   style={{
@@ -37,7 +37,9 @@ const MobileMenus = ({ menus }: any) => {
                   }}>
                   {menu.sub_menu.map((sub: any, i: number) => (
                     <li key={i}>
-                      <Link href={sub.sub_menu_link}>{sub.sub_menu_link}</Link>
+                      <Link href={sub.sub_menu_link || ''}>
+                        {sub.sub_menu_link}
+                      </Link>
                     </li>
                   ))}
                 </ul>
