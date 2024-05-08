@@ -3,7 +3,6 @@
 import banner_overlay from '@styles/assets/img/slider/slider-2.png'
 
 const Home1Banner = ({ data }: any) => {
-  console.log('Datttaaa', data)
   return (
     <div className='banner-area banner-area2'>
       <div className='swiper-container'>

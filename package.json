@@ -36,7 +36,9 @@
     "@trpc/server": "next",
     "@types/react-modal-video": "^1.2.3",
     "bootstrap": "5.3.3",
+    "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
+    "framer-motion": "^11.1.9",
     "i": "^0.3.7",
     "next": "14.3.0-canary.28",
     "payload": "^3.0.0-beta.25",
@@ -48,8 +50,8 @@
     "react-modal-video": "^2.0.1",
     "react-use": "^17.5.0",
     "sharp": "^0.32.6",
-    "framer-motion": "^11.1.9",
     "swiper": "^11.1.1",
+    "tailwind-merge": "^2.3.0",
     "zod": "^3.23.4"
   },
   "devDependencies": {
