@@ -15,7 +15,8 @@ const Home1RecentWorks = (data: Home1_RecentWork) => {
         <div
           className='row align-items-center wow fadeInUp'
           data-wow-duration='1.5s'
-          data-wow-delay='.3s'>
+          data-wow-delay='.3s'
+        >
           <div className='col-xl-7 col-lg-8 col-12'>
             <div className='section__title gallery-section-title mb-55'>
               <span className='sub-title'>{data?.title}</span>
@@ -37,7 +38,8 @@ const Home1RecentWorks = (data: Home1_RecentWork) => {
       <div
         className='dp-gallery-active wow fadeInUp'
         data-wow-duration='1.5s'
-        data-wow-delay='.3s'>
+        data-wow-delay='.3s'
+      >
         <div>
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, Autoplay]}
@@ -77,7 +79,8 @@ const Home1RecentWorks = (data: Home1_RecentWork) => {
               1400: {
                 slidesPerView: 4,
               },
-            }}>
+            }}
+          >
             {data?.gallery?.slice(0, 5).map(item => (
               <SwiperSlide key={item.id}>
                 <div>
