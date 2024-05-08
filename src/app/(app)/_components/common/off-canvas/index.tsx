@@ -5,20 +5,9 @@ import React from 'react'
 import MobileMenus from './mobile-menus'
 
 const OffCanvasMain = ({ isOffCanvasOpen, setIsOffCanvasOpen, data }: any) => {
-  const {
-    banner,
-    button_one,
-    button_two,
-    address,
-    email,
-    facebook,
-    instagram,
-    logo,
-    phone,
-    twitter,
-    youtube,
-    menu,
-  } = data
+
+  const {address,banner,blockType,button_one, button_two, email, facebook, instagram, logo, phone, twitter, youtube,menu} = data
+
   const handleSubmit = (e: any) => {
     e.preventDefault()
   }

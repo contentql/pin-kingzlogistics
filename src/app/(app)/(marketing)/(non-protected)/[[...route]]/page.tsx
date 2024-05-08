@@ -4,14 +4,20 @@ import { SlugType } from '@/blocks'
 import RenderBlocks from '@/blocks/RenderBlocks'
 import { serverClient } from '@/trpc/serverClient'
 
-const Page = async ({ params }: { params: { route: SlugType[] } }) => {
+interface PageProps {
+  params: { route: SlugType[] }
+}
+
+const Page = async ({ params }: PageProps) => {
   const slug = params.route?.at(0) || 'index'
 
-  const pageData = await serverClient.page.getPageData({ slug })
+  const pageData = await serverClient.page.getPageData({
+    slug,
+  })
 
   return (
     <div>
-      <RenderBlocks layout={pageData as PageType} slug={slug} />
+      <RenderBlocks pageInitialData={pageData as PageType} slug={slug} />
     </div>
   )
 }

@@ -1,4 +1,3 @@
-import { env } from '@env'
 import { CollectionConfig } from 'payload/types'
 
 import { blocks } from '@/blocks'
@@ -14,14 +13,16 @@ export const Pages: CollectionConfig = {
   },
   admin: {
     useAsTitle: 'name',
-    preview: doc => {
-      return `${env.NEXT_PUBLIC_PUBLIC_URL}/next/preview?url=${encodeURIComponent(
-        `${env.NEXT_PUBLIC_PUBLIC_URL}/${doc.slug !== 'index' ? doc.slug : ''}`,
-      )}&secret=${env.PAYLOAD_PUBLIC_DRAFT_SECRET}`
-    },
+    // preview: doc => {
+    //   return `${env.PAYLOAD_URL}/next/preview?url=${encodeURIComponent(
+    //     `${env.PAYLOAD_URL}/${doc.slug !== 'index' ? doc.slug : ''}`,
+    //   )}&secret=${env.PAYLOAD_PUBLIC_DRAFT_SECRET}`
+    // },
   },
   versions: {
-    drafts: true,
+    drafts: {
+      autosave: true,
+    },
   },
   fields: [
     {
