@@ -29,9 +29,16 @@ export const Home1_Services_Block: Block = {
       fields: [
         {
           name: 'serviceIcon',
-          type: 'upload',
-          relationTo: 'media',
-          label: 'Author Image',
+          type: 'select',
+          options: [
+            { value: 'flaticon-boat', label: 'boat' },
+            { value: 'flaticon-plane', label: 'plane' },
+            { value: 'flaticon-frontal-truck', label: 'frontal-truck' },
+            { value: 'flaticon-train', label: 'train' },
+            { value: 'flaticon-box', label: 'box' },
+            { value: 'flaticon-bicycle', label: 'bicycle' },
+          ],
+
           admin: { description: 'service icons' },
         },
         {

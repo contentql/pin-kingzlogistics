@@ -31,13 +31,15 @@ const NiceSelect = ({
       tabIndex={0}
       onClick={() => setOpen(prev => !prev)}
       onKeyPress={e => e}
-      ref={ref}>
+      ref={ref}
+    >
       <span className='current'>{current?.text || placeholder}</span>
       <ul
         className='list'
         role='menubar'
         onClick={e => e.stopPropagation()}
-        onKeyPress={e => e.stopPropagation()}>
+        onKeyPress={e => e.stopPropagation()}
+      >
         {options?.map((item: any) => (
           <li
             key={item.value}
@@ -45,7 +47,8 @@ const NiceSelect = ({
             className={`option ${item.value === current?.value && 'selected focus'}`}
             role='menuitem'
             onClick={() => currentHandler(item)}
-            onKeyPress={e => e}>
+            onKeyPress={e => e}
+          >
             {item.text}
           </li>
         ))}

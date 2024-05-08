@@ -17,7 +17,8 @@ const MissionSection = (MissionSection_1_data: MissionSection_1) => {
             <div
               className='mission__content wow fadeInUp'
               data-wow-duration='1.5s'
-              data-wow-delay='.3s'>
+              data-wow-delay='.3s'
+            >
               <div className='section__title mb-35'>
                 <span className='sub-title'>{MissionSection_1_data?.tag}</span>
                 <h2 className='title'>{MissionSection_1_data?.title}</h2>

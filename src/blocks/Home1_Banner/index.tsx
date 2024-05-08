@@ -2,8 +2,7 @@
 
 import { Home1_Banner, Media } from '@payload-types'
 
-const Home1Banner = (data:Home1_Banner) => {
-  
+const Home1Banner = (data: Home1_Banner) => {
   return (
     <div className='banner-area banner-area2'>
       <div className='swiper-container'>
@@ -12,7 +11,10 @@ const Home1Banner = (data:Home1_Banner) => {
             <div className='single-banner single-banner-2 banner-970'>
               <div
                 className='banner-bg banner-bg2'
-                style={{ backgroundImage: `url(${(data?.banner_image as Media)?.url})` }}></div>
+                style={{
+                  backgroundImage: `url(${(data?.banner_image as Media)?.url})`,
+                }}
+              ></div>
               <div className='container pos-rel'>
                 <div className='row align-items-center justify-content-center'>
                   <div className='col-lg-8'>
@@ -20,7 +22,8 @@ const Home1Banner = (data:Home1_Banner) => {
                       <h1
                         className='banner-title'
                         data-animation='fadeInUp'
-                        data-delay='.5s'>
+                        data-delay='.5s'
+                      >
                         {data?.title}
                       </h1>
                     </div>

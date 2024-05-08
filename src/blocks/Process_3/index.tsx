@@ -22,7 +22,8 @@ const ProcessThree = (data: any) => {
           <div
             className='work__wrapper p-relative wow fadeInUp'
             data-wow-duration='1.5s'
-            data-wow-delay='.3s'>
+            data-wow-delay='.3s'
+          >
             <div className='row align-items-center align-items-xxl-end'>
               <div className='col-xl-5 col-lg-5'>
                 <div className='work__content'>
@@ -60,7 +61,8 @@ const ProcessThree = (data: any) => {
                     <button
                       type='submit'
                       className='popup-video play-btn play-btn-white'
-                      onClick={() => setIsVideoOpen(true)}>
+                      onClick={() => setIsVideoOpen(true)}
+                    >
                       <i className='fas fa-play'></i>
                     </button>
                   </div>

@@ -34,7 +34,8 @@ const MobileMenus = ({ menus }: any) => {
                   className='sub-menu'
                   style={{
                     display: navTitle === menu.title ? 'block' : 'none',
-                  }}>
+                  }}
+                >
                   {menu.sub_menu.map((sub: any, i: number) => (
                     <li key={i}>
                       <Link href={sub.sub_menu_link || ''}>
@@ -49,7 +50,8 @@ const MobileMenus = ({ menus }: any) => {
                     navTitle === menu.title ? 'mean-clicked' : ''
                   }`}
                   onClick={() => openMobileMenu(menu.title)}
-                  style={{ fontSize: '18px', cursor: 'pointer' }}>
+                  style={{ fontSize: '18px', cursor: 'pointer' }}
+                >
                   <i className='fal fa-plus'></i>
                 </Link>
               </li>

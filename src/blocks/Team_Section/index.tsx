@@ -9,7 +9,8 @@ const Home1_Team_section = () => {
         <div
           className='row justify-content-center wow fadeInUp'
           data-wow-duration='1.5s'
-          data-wow-delay='.3s'>
+          data-wow-delay='.3s'
+        >
           <div className='col-md-8'>
             <div className='section__title mb-50 text-center'>
               <span className='sub-title'>team</span>
@@ -19,7 +20,8 @@ const Home1_Team_section = () => {
           <div
             className='row wow fadeInUp'
             data-wow-duration='1.5s'
-            data-wow-delay='.3s'>
+            data-wow-delay='.3s'
+          >
             {team_data?.map(item => (
               <div className='col-lg-4 col-md-6' key={item.id}>
                 <div className='team__item team__overlay p-relative mb-50 clip-box'>

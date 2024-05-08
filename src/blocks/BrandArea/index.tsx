@@ -14,7 +14,8 @@ const BrandArea = (brandAreaData: BrandAreaType) => {
           <div
             className='wow fadeInUp'
             data-wow-duration='1.5s'
-            data-wow-delay='.3s'>
+            data-wow-delay='.3s'
+          >
             <Swiper
               modules={[Autoplay]}
               slidesPerView={1}
@@ -44,7 +45,8 @@ const BrandArea = (brandAreaData: BrandAreaType) => {
                 0: {
                   slidesPerView: 1,
                 },
-              }}>
+              }}
+            >
               {brandAreaData?.brands?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div>

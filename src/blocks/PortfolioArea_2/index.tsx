@@ -29,7 +29,8 @@ const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
       <div
         className='container wow fadeInUp'
         data-wow-duration='1.5s'
-        data-wow-delay='.3s'>
+        data-wow-delay='.3s'
+      >
         <div className='row align-items-center'>
           <div className='col-lg-4'>
             <div className='section__title gallery-section-title mb-55'>
@@ -49,7 +50,8 @@ const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
                     type='button'
                     role='tab'
                     aria-controls='nav-home'
-                    aria-selected='true'>
+                    aria-selected='true'
+                  >
                     {PortfolioAreaData?.button_1}
                   </button>
                   <button
@@ -60,7 +62,8 @@ const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
                     type='button'
                     role='tab'
                     aria-controls='nav-forwarding'
-                    aria-selected='false'>
+                    aria-selected='false'
+                  >
                     {PortfolioAreaData?.button_2}
                   </button>
                   <button
@@ -71,7 +74,8 @@ const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
                     type='button'
                     role='tab'
                     aria-controls='nav-contact'
-                    aria-selected='false'>
+                    aria-selected='false'
+                  >
                     {PortfolioAreaData?.button_3}
                   </button>
                   <button
@@ -82,7 +86,8 @@ const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
                     type='button'
                     role='tab'
                     aria-controls='nav-wordpress'
-                    aria-selected='false'>
+                    aria-selected='false'
+                  >
                     {PortfolioAreaData?.button_4}
                   </button>
                   <button
@@ -93,7 +98,8 @@ const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
                     type='button'
                     role='tab'
                     aria-controls='nav-webdesign'
-                    aria-selected='false'>
+                    aria-selected='false'
+                  >
                     {PortfolioAreaData?.button_5}
                   </button>
                 </div>
@@ -107,12 +113,14 @@ const PortfolioArea = (PortfolioAreaData: PortfolioAreaType) => {
             id='nav-home'
             role='tabpanel'
             aria-labelledby='nav-home-tab'
-            tabIndex={0}>
+            tabIndex={0}
+          >
             <div className='row grid mb-30'>
               {PortfolioAreaData?.portfolios?.map((item, index) => (
                 <div
                   className={PortfolioData[index]?.daynamic_class}
-                  key={index}>
+                  key={index}
+                >
                   <div className='portfolio__item mb-30'>
                     <div className='dp-single-gallery'>
                       <div className='dp-gallery-thumb'>

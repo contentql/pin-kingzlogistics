@@ -41,7 +41,8 @@ const ContactInfoArea = (ContactIfoArea_2_Data: ContactIfoArea_2) => {
       className='contact__area contact__bg pt-120 pb-90 wow fadeInUp'
       data-wow-duration='1.5s'
       data-wow-delay='.3s'
-      data-background='assets/img/contact/map-bg.png'>
+      data-background='assets/img/contact/map-bg.png'
+    >
       <div className='container'>
         <div className='contact__info-box mb-120'>
           <div className='row align-items-center'>
@@ -71,7 +72,8 @@ const ContactInfoArea = (ContactIfoArea_2_Data: ContactIfoArea_2) => {
                           <div className='dot-inner'>
                             <img
                               src={(item?.flag_image as Media)?.url || ''}
-                              alt='contact img'></img>
+                              alt='contact img'
+                            ></img>
                           </div>
                         </div>
                       </div>

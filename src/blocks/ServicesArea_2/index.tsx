@@ -7,7 +7,8 @@ const ServicesAreaTwo = ({ servicesData }: any) => {
         <div
           className='row justify-content-center wow fadeInUp'
           data-wow-duration='1.5s'
-          data-wow-delay='.3s'>
+          data-wow-delay='.3s'
+        >
           <div className='col-md-8'>
             <div className='section__title mb-55 text-center'>
               <span className='sub-title'>services</span>
@@ -18,7 +19,8 @@ const ServicesAreaTwo = ({ servicesData }: any) => {
         <div
           className='row wow fadeInUp'
           data-wow-duration='1.5s'
-          data-wow-delay='.5s'>
+          data-wow-delay='.5s'
+        >
           {servicesData.map((item: any, index: number) => (
             <div className='col-xl-4 col-md-6' key={item.id}>
               <div className='services__3-item mb-30'>

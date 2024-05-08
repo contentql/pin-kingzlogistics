@@ -216,7 +216,16 @@ export interface Home1_Services {
   subtitle: string;
   services?:
     | {
-        serviceIcon?: string | Media | null;
+        serviceIcon?:
+          | (
+              | 'flaticon-boat'
+              | 'flaticon-plane'
+              | 'flaticon-frontal-truck'
+              | 'flaticon-train'
+              | 'flaticon-box'
+              | 'flaticon-bicycle'
+            )
+          | null;
         title: string;
         subtitle: string;
         id?: string | null;

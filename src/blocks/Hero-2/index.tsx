@@ -35,7 +35,8 @@ const HeroTwo = (Hero_2_data: Hero_2) => {
             navigation={{
               nextEl: '.slider-button-prev',
               prevEl: '.slider-button-next',
-            }}>
+            }}
+          >
             {Hero_2_data?.hero?.slice(0, 3)?.map((item, index) => (
               <SwiperSlide key={index}>
                 <div>
@@ -44,7 +45,8 @@ const HeroTwo = (Hero_2_data: Hero_2) => {
                       className='banner-bg banner-bg3'
                       style={{
                         backgroundImage: `url(${(item?.hero_2_image as Media)?.url || ''})`,
-                      }}></div>
+                      }}
+                    ></div>
                     <div className='container pos-rel'>
                       <div className='row align-items-center justify-content-center'>
                         <div className='col-xl-12 col-lg-8 col-md-9'>
@@ -52,27 +54,32 @@ const HeroTwo = (Hero_2_data: Hero_2) => {
                             <div
                               className='banner-meta-text bdevs-el-subtitle'
                               data-animation='fadeInUp'
-                              data-delay='.3s'>
+                              data-delay='.3s'
+                            >
                               <span>{item?.sub_title}</span>
                             </div>
                             <h1
                               className='banner-title bdevs-el-title'
                               data-animation='fadeInUp'
-                              data-delay='.5s'>
+                              data-delay='.5s'
+                            >
                               {item?.title_1} <br /> {item?.title_2}
                             </h1>
                             <div
                               className='banner-btn justify-content-center'
                               data-animation='fadeInUp'
-                              data-delay='.7s'>
+                              data-delay='.7s'
+                            >
                               <Link
                                 href='/contact'
-                                className='fill-btn clip-btn bdevs-el-btn'>
+                                className='fill-btn clip-btn bdevs-el-btn'
+                              >
                                 {Hero_2_data?.button_one}
                               </Link>
                               <Link
                                 href='/services'
-                                className='skew-btn bdevs-el-sec-btn'>
+                                className='skew-btn bdevs-el-sec-btn'
+                              >
                                 {Hero_2_data?.button_two}
                               </Link>
                             </div>

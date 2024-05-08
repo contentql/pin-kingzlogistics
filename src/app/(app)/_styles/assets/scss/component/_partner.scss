@@ -1,7 +1,7 @@
 /*----------------------------------------
     27. Partner CSS 
 ----------------------------------------*/
-@use "../abstract" as *;
+@use '../abstract' as *;
 
 .partner-thumb {
   margin-bottom: 30px;
@@ -10,14 +10,14 @@
   }
 }
 .partner-item {
-    text-align: center;
-    border: 1px solid var(--clr-common-border-4);
-    padding: 40px 35px 40px;
-    @media #{$xs,$md,$xl,}{
-      padding: 35px 25px 30px;
-    }
+  text-align: center;
+  border: 1px solid var(--clr-common-border-4);
+  padding: 40px 35px 40px;
+  @media #{$xs,$md,$xl,} {
+    padding: 35px 25px 30px;
+  }
 }
-  
+
 .partner-content {
   h3 {
     a {
@@ -26,10 +26,10 @@
       margin-bottom: 20px;
       color: var(--clr-common-heading);
       &:hover {
-        color: var(--clr-common-color-red)
+        color: var(--clr-common-color-red);
       }
     }
-    @media #{$xs,$md,$xl}{
+    @media #{$xs,$md,$xl} {
       font-size: 20px;
     }
   }

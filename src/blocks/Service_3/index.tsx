@@ -10,7 +10,8 @@ const Service_3 = ({ services_3 }: any) => {
           <div
             className='services__box services__box--space wow fadeInUp'
             data-wow-duration='1.5s'
-            data-wow-delay='.3s'>
+            data-wow-delay='.3s'
+          >
             <div className='row'>
               {services_3.map((item: any) => (
                 <div className='col-lg-3 col-xl-3 col-md-6' key={item.id}>

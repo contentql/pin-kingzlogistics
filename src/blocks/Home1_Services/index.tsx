@@ -1,29 +1,31 @@
 'use client'
 
-import services_data from '@data/services-data'
+import { Home1_Services } from '@payload-types'
 import banner_overlay from '@styles/assets/img/services/services-bg.png'
 import Link from 'next/link'
 import { Navigation } from 'swiper/modules'
 //swiper style
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-const Home1ServicesArea = () => {
+const Home1ServicesArea = (data: Home1_Services) => {
   return (
     <section
       id='services__area-2'
       className='services__area-2 fix grey-bg-2 pt-120 pb-120'
-      style={{ backgroundImage: `url(${banner_overlay.src})` }}>
+      style={{ backgroundImage: `url(${banner_overlay.src})` }}
+    >
       <div
         className='services__section-area wow fadeInUp'
         data-wow-duration='1.5s'
-        data-wow-delay='.3s'>
+        data-wow-delay='.3s'
+      >
         <div className='container'>
           <div className='row'>
             <div className='col-lg-3 col-md-4'>
               <div className='services__section'>
                 <div className='section__title mb-95'>
-                  <span className='sub-title'>services</span>
-                  <h2 className='title'>what we do</h2>
+                  <span className='sub-title'>{data?.title}</span>
+                  <h2 className='title'>{data?.subtitle}</h2>
                 </div>
                 <div className='services-two-nav'>
                   <div className='services-button-prev'>
@@ -69,19 +71,20 @@ const Home1ServicesArea = () => {
                         0: {
                           slidesPerView: 3,
                         },
-                      }}>
-                      {services_data.slice(0, 6).map(item => (
+                      }}
+                    >
+                      {data?.services?.slice(0, 6).map(item => (
                         <SwiperSlide key={item.id}>
                           <div className='swiper-slide'>
                             <div className='services__item text-center'>
                               <div className='services__item-icon mb-35'>
-                                <i className={item.icon}></i>
+                                <i className={"flaticon-boat"}></i>
                               </div>
                               <div className='services__item-content'>
                                 <Link href={`/services-details/${item.id}`}>
                                   <h3>{item.title}</h3>
                                 </Link>
-                                <p>{item.description.slice(0, 63)}</p>
+                                <p>{item?.subtitle}</p>
                               </div>
                               <div className='services__item-shape'></div>
                             </div>

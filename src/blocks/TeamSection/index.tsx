@@ -6,7 +6,8 @@ const TeamSection = (TeamSectionData: TeamSectionType) => {
     <section
       className='team__3 grey-bg-4 pt-120 pb-70 wow fadeInUp'
       data-wow-duration='1.5s'
-      data-wow-delay='.3s'>
+      data-wow-delay='.3s'
+    >
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-md-8'>

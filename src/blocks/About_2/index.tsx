@@ -21,7 +21,8 @@ const AboutUs_2 = (data: About_2) => {
         <div
           className='row align-items-center wow fadeInU'
           data-wow-duration='1.5s'
-          data-wow-delay='.3s'>
+          data-wow-delay='.3s'
+        >
           <div className='col-xl-6 col-lg-6'>
             <div className='about__3-img-wrapper p-relative mb-60'>
               <div className='about__3-top w-img'>
@@ -67,7 +68,8 @@ const AboutUs_2 = (data: About_2) => {
 
                   <div
                     className='about__3-content-btn mt-35'
-                    style={{ display: 'flex' }}>
+                    style={{ display: 'flex' }}
+                  >
                     <Link href='/about-us' className='skew-btn'>
                       {button_one}
                     </Link>

@@ -29,7 +29,8 @@ const FunfactArea = (funFactData: FunfactAreaType) => {
         <div
           className='dp-funfactor-grid wow fadeInUp'
           data-wow-duration='1.5s'
-          data-wow-delay='.3s'>
+          data-wow-delay='.3s'
+        >
           {funFactData?.funfacts?.map((item, index) => (
             <div className='dp-funfact-wrapper mb-30' key={index}>
               <div className='dp-funfact-icon'>

@@ -110,7 +110,8 @@ const Navbar_3 = (data: NavbarThree) => {
                     <div className='header__toggle-btn sidebar-toggle-btn'>
                       <div
                         className='header__bar'
-                        onClick={() => setIsOffCanvasOpen(true)}>
+                        onClick={() => setIsOffCanvasOpen(true)}
+                      >
                         <span></span>
                         <span></span>
                         <span></span>
@@ -226,7 +227,8 @@ const Navbar_3 = (data: NavbarThree) => {
               <div className='header__toggle-btn sidebar-toggle-btn text-end d-block d-lg-none'>
                 <div
                   className='header__bar'
-                  onClick={() => setIsOffCanvasOpen(true)}>
+                  onClick={() => setIsOffCanvasOpen(true)}
+                >
                   <span></span>
                   <span></span>
                   <span></span>

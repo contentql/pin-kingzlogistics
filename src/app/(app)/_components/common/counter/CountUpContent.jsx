@@ -18,7 +18,8 @@ const CountUpContent = ({ number, text, add_style = true }) => {
       <CountUp start={focus ? 0 : null} end={number} duration={5}>
         {({ countUpRef }) => (
           <div
-            className={`bd-promotion-counter-number ${add_style ? 'align-items-center justify-content-center' : ''}`}>
+            className={`bd-promotion-counter-number ${add_style ? 'align-items-center justify-content-center' : ''}`}
+          >
             <span className='counter' ref={countUpRef} />
             <InView as='span' onChange={inView => visibleChangeHandler(inView)}>
               {text && <span className='counter-text'>{text}</span>}
