@@ -9,11 +9,16 @@ const payload = await getPayload({
 })
 export const getLayouts = router({
   getPageData: publicProcedure
-    .input(z.object({ slug: z.string() }))
+    .input(
+      z.object({
+        slug: z.string(),
+      }),
+    )
     .query(async ({ input }) => {
       try {
         const { docs } = await payload.find({
           collection: 'pages',
+          draft: false,
           where: {
             slug: {
               equals: input.slug,
@@ -21,16 +26,20 @@ export const getLayouts = router({
           },
         })
 
+        // if (!docs.at(0)) {
+        //   throw new TRPCError({ code: 'NOT_FOUND' })
+        // }
+
         return docs.at(0)
       } catch (error: any) {
         console.log(error)
-        throw new Error(error.message)
       }
     }),
   getAllPages: publicProcedure.query(async () => {
     try {
       const { docs } = await payload.find({
         collection: 'pages',
+        draft: false,
       })
 
       return docs

@@ -13,6 +13,7 @@ export const getBlogs = router({
     try {
       const { docs } = await payload.find({
         collection: 'blogs',
+        draft: false,
       })
 
       return docs
@@ -23,11 +24,16 @@ export const getBlogs = router({
   }),
 
   getBlogBySlug: publicProcedure
-    .input(z.object({ slug: z.string() }))
+    .input(
+      z.object({
+        slug: z.string(),
+      }),
+    )
     .query(async ({ input }) => {
       try {
         const { docs } = await payload.find({
           collection: 'blogs',
+          draft: false,
           where: {
             slug: {
               equals: input.slug,
