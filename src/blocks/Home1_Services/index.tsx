@@ -4,21 +4,20 @@ import { Home1_Services } from '@payload-types'
 import banner_overlay from '@styles/assets/img/services/services-bg.png'
 import Link from 'next/link'
 import { Navigation } from 'swiper/modules'
-//swiper style
 import { Swiper, SwiperSlide } from 'swiper/react'
+
+//swiper style
 
 const Home1ServicesArea = (data: Home1_Services) => {
   return (
     <section
       id='services__area-2'
       className='services__area-2 fix grey-bg-2 pt-120 pb-120'
-      style={{ backgroundImage: `url(${banner_overlay.src})` }}
-    >
+      style={{ backgroundImage: `url(${banner_overlay.src})` }}>
       <div
         className='services__section-area wow fadeInUp'
         data-wow-duration='1.5s'
-        data-wow-delay='.3s'
-      >
+        data-wow-delay='.3s'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-3 col-md-4'>
@@ -71,20 +70,19 @@ const Home1ServicesArea = (data: Home1_Services) => {
                         0: {
                           slidesPerView: 3,
                         },
-                      }}
-                    >
-                      {data?.services?.slice(0, 6).map(item => (
+                      }}>
+                      {data?.services?.map(item => (
                         <SwiperSlide key={item.id}>
                           <div className='swiper-slide'>
                             <div className='services__item text-center'>
                               <div className='services__item-icon mb-35'>
-                                <i className={"flaticon-boat"}></i>
+                                <i className={item?.serviceIcon as string}></i>
                               </div>
                               <div className='services__item-content'>
                                 <Link href={`/services-details/${item.id}`}>
                                   <h3>{item.title}</h3>
                                 </Link>
-                                <p>{item?.subtitle}</p>
+                                <p>{item?.subtitle?.slice(0, 63)}</p>
                               </div>
                               <div className='services__item-shape'></div>
                             </div>

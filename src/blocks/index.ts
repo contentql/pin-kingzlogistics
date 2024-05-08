@@ -24,8 +24,11 @@ import Home1AboutUs from '@/blocks/Home1_AboutUs'
 import { Home1_AboutUs_Block } from '@/blocks/Home1_AboutUs/block'
 import Home1Banner from '@/blocks/Home1_Banner'
 import { Home1_Banner_Block } from '@/blocks/Home1_Banner/block'
+import Home1RecentWorks from '@/blocks/Home1_RecentWorks'
 import Home1ServicesArea from '@/blocks/Home1_Services'
 import { Home1_Services_Block } from '@/blocks/Home1_Services/block'
+import Home1_Team_section from '@/blocks/Home1_Team_Section'
+import { Home1_Team_section_Block } from '@/blocks/Home1_Team_Section/block'
 import MissionSection from '@/blocks/MissionSection_1'
 import { MissionSection_Block } from '@/blocks/MissionSection_1/block'
 import Navbar_3 from '@/blocks/Navbar_3'
@@ -46,10 +49,10 @@ import ServicesAreaTwo from '@/blocks/ServicesArea_2'
 import { ServiceArea_2_Block } from '@/blocks/ServicesArea_2/block'
 import TeamSection from '@/blocks/TeamSection'
 import { TeamSection_Block } from '@/blocks/TeamSection/block'
-import Home1_Team_section from '@/blocks/Team_Section'
-import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
 import Test1_1 from '@/blocks/Test1_1'
 import { Test1_1_Block } from '@/blocks/Test1_1/block'
+
+import { Home1_RecentWork_Block } from './Home1_RecentWorks/block'
 
 export const blocksJSX = {
   Test1_1: Test1_1,
@@ -72,7 +75,7 @@ export const blocksJSX = {
 
   Home1_Help_Service: HelpService,
   Home1_Team_section: Home1_Team_section,
-  Home1AboutUs: Home1AboutUs,
+  Home1_AboutUs: Home1AboutUs,
   PortfolioArea_2: PortfolioArea,
   ServiceCta_2: ServiceCta,
   ContactInfoArea_2: ContactInfoArea,
@@ -82,6 +85,7 @@ export const blocksJSX = {
   PriceCtaArea_2: PriceCtaArea,
   ApproachArea_1: ApproachArea,
   MissionSection_1: MissionSection,
+  Home1_RecentWork: Home1RecentWorks,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -104,6 +108,7 @@ export const blocks = {
   Home1_Help_Service: Home1_Help_Service_Block,
   Home1_Team_section: Home1_Team_section_Block,
   Home1_AboutUs: Home1_AboutUs_Block,
+  Home1_RecentWork: Home1_RecentWork_Block,
   PortfolioArea_2: PortfolioArea_Block,
   ServiceCta_2: ServiceCta_2_Block,
   ContactInfoArea_2: ContactInfoArea_2_Block,

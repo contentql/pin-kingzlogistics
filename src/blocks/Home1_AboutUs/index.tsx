@@ -15,16 +15,14 @@ const Home1AboutUs = () => {
       <section
         className='about__area-2 pt-120 pb-60 wow fadeInUp'
         data-wow-duration='1.5s'
-        data-wow-delay='.3s'
-      >
+        data-wow-delay='.3s'>
         <div className='container'>
           <div className='row align-items-center'>
             <div className='col-lg-6 col-xl-5'>
               <div
                 className='about__content-2 mb-60 wow fadeInRight'
                 data-wow-duration='1.5s'
-                data-wow-delay='.5s'
-              >
+                data-wow-delay='.5s'>
                 <div className='section__title mb-50'>
                   <span className='sub-title'>about us</span>
                   <h2 className='title'>
@@ -42,8 +40,7 @@ const Home1AboutUs = () => {
                         type='button'
                         role='tab'
                         aria-controls='approch'
-                        aria-selected='true'
-                      >
+                        aria-selected='true'>
                         our approch
                       </button>
                     </li>
@@ -56,8 +53,7 @@ const Home1AboutUs = () => {
                         type='button'
                         role='tab'
                         aria-controls='goal'
-                        aria-selected='false'
-                      >
+                        aria-selected='false'>
                         our goal
                       </button>
                     </li>
@@ -70,8 +66,7 @@ const Home1AboutUs = () => {
                         type='button'
                         role='tab'
                         aria-controls='mision'
-                        aria-selected='false'
-                      >
+                        aria-selected='false'>
                         our mision
                       </button>
                     </li>
@@ -81,8 +76,7 @@ const Home1AboutUs = () => {
                       className='tab-pane fade show active'
                       id='approch'
                       role='tabpanel'
-                      aria-labelledby='approch-tab'
-                    >
+                      aria-labelledby='approch-tab'>
                       <p>
                         From finance, retail, and travel, to social media,
                         cybersecurity, adtech, and more, market leaders are
@@ -99,8 +93,7 @@ const Home1AboutUs = () => {
                       className='tab-pane fade'
                       id='goal'
                       role='tabpanel'
-                      aria-labelledby='goal-tab'
-                    >
+                      aria-labelledby='goal-tab'>
                       <p>
                         There are many variations of passages of Lorem Ipsum
                         available, but the majority have suffered alteration in
@@ -118,8 +111,7 @@ const Home1AboutUs = () => {
                       className='tab-pane fade'
                       id='mision'
                       role='tabpanel'
-                      aria-labelledby='mision-tab'
-                    >
+                      aria-labelledby='mision-tab'>
                       <p>
                         It was popularised in the 1960s with the release of
                         Letraset sheets containing Lorem Ipsum passages, and
@@ -140,8 +132,7 @@ const Home1AboutUs = () => {
               <div
                 className='about__img-2 mb-60 ml-60 w-img p-relative wow fadeInLeft'
                 data-wow-duration='1.5s'
-                data-wow-delay='.3s'
-              >
+                data-wow-delay='.3s'>
                 <Image
                   src={about_img}
                   style={{ width: '100%', height: 'auto' }}
@@ -151,8 +142,7 @@ const Home1AboutUs = () => {
                   <button
                     type='button'
                     className='popup-video play-btn play-btn-white'
-                    onClick={() => setIsVideoOpen(true)}
-                  >
+                    onClick={() => setIsVideoOpen(true)}>
                     <i className='fas fa-play'></i>
                   </button>
                 </div>

@@ -138,6 +138,7 @@ export interface Page {
         | Home1_Help_Service
         | Home1_TeamSection
         | Home1_AboutUs
+        | Home1_RecentWork
         | PortfolioArea
         | ServiceCta_2
         | ContactIfoArea_2
@@ -393,6 +394,26 @@ export interface Home1_AboutUs {
   id?: string | null;
   blockName?: string | null;
   blockType: 'Home1_AboutUs';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Home1_RecentWork".
+ */
+export interface Home1_RecentWork {
+  title: string;
+  subtitle: string;
+  gallery?:
+    | {
+        title: string;
+        subtitle: string;
+        gallery_image?: string | Media | null;
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Home1_RecentWork';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
