@@ -1,14 +1,12 @@
-import mission_contact from '@styles/assets/img/mission/mission-contact-img.jpg'
-import mission_img from '@styles/assets/img/mission/mission-img.jpg'
-import Image from 'next/image'
+import { Media, MissionSection_1 } from '@payload-types'
 import Link from 'next/link'
 
-const MissionSection = () => {
+const MissionSection = (MissionSection_1_data: MissionSection_1) => {
   return (
     <section className='mission__area p-relative fix grey-bg-4 mb-120'>
       <div className='mission__img m-img'>
-        <Image
-          src={mission_img}
+        <img
+          src={(MissionSection_1_data?.image as Media)?.url || ''}
           style={{ width: '100%', height: 'auto' }}
           alt='mission'
         />
@@ -21,18 +19,16 @@ const MissionSection = () => {
               data-wow-duration='1.5s'
               data-wow-delay='.3s'>
               <div className='section__title mb-35'>
-                <span className='sub-title'>Our Mission</span>
-                <h2 className='title'>Our global logistics expertise supply</h2>
+                <span className='sub-title'>{MissionSection_1_data?.tag}</span>
+                <h2 className='title'>{MissionSection_1_data?.title}</h2>
               </div>
               <div className='mission__text'>
-                <p>
-                  Delport Group is a representative logistics operator providing
-                  full range of service in the sphere of customs clearance
-                  transportation worldwide for any cargo.
-                </p>
+                <p>{MissionSection_1_data?.description}</p>
                 <div className='mission__text-inner'>
-                  <Image
-                    src={mission_contact}
+                  <img
+                    src={
+                      (MissionSection_1_data?.small_image as Media)?.url || ''
+                    }
                     style={{ width: 'auto', height: 'auto' }}
                     alt='mission'
                   />
@@ -44,10 +40,10 @@ const MissionSection = () => {
                         </Link>
                       </div>
                       <div className='contact-info-text'>
-                        <span>send email</span>
+                        <span>{MissionSection_1_data?.heading}</span>
                         <h5>
                           <Link href='mailto:info@webdow.com'>
-                            info@webdow.com
+                            {MissionSection_1_data?.email}
                           </Link>{' '}
                         </h5>
                       </div>
