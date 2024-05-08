@@ -34,8 +34,6 @@ import TeamSection from '@/blocks/TeamSection'
 import { TeamSection_Block } from '@/blocks/TeamSection/block'
 import Home1_Team_section from '@/blocks/Team_Section'
 import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
-import Test1_1 from '@/blocks/Test1_1'
-import { Test1_1_Block } from '@/blocks/Test1_1/block'
 
 import BlogSectionTwo from './BlogSection_2'
 import { BlogSectionTwo_Block } from './BlogSection_2/block'
@@ -49,7 +47,6 @@ import ProcessThree from './Process_3'
 import { ProcessThree_Block } from './Process_3/block'
 
 export const blocksJSX = {
-  Test1_1: Test1_1,
   Page1: Page1,
 
   BrandArea: BrandArea,
@@ -82,7 +79,6 @@ export const blocksJSX = {
 export type SlugType = keyof typeof blocksJSX
 
 export const blocks = {
-  Test1_1: Test1_1_Block,
   Page1_Block: Page1_Block,
 
   BrandArea_Block: BrandArea_Block,
