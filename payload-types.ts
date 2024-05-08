@@ -145,6 +145,8 @@ export interface Page {
         | Footer_3
         | Hero_2
         | PriceCtaArea_2
+        | ApproachArea_1
+        | MissionSection_1
         | ProcessThree
       )[]
     | null;
@@ -527,6 +529,41 @@ export interface PriceCtaArea_2 {
   id?: string | null;
   blockName?: string | null;
   blockType: 'PriceCtaArea_2';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ApproachArea_1".
+ */
+export interface ApproachArea_1 {
+  tag: string;
+  title: string;
+  description: string;
+  points: {
+    point: string;
+    id?: string | null;
+  }[];
+  image: string | Media;
+  button_text?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ApproachArea_1';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MissionSection_1".
+ */
+export interface MissionSection_1 {
+  tag: string;
+  title: string;
+  description: string;
+  image: string | Media;
+  small_image: string | Media;
+  heading: string;
+  email: string;
+  button_text?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'MissionSection_1';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
