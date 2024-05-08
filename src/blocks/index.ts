@@ -8,8 +8,12 @@ import BlogSectionTwo from '@/blocks/BlogSection_2'
 import { BlogSectionTwo_Block } from '@/blocks/BlogSection_2/block'
 import BrandArea from '@/blocks/BrandArea'
 import { BrandArea_Block } from '@/blocks/BrandArea/block'
+import { Cards } from '@/blocks/Cards'
+import { Cards_Block } from '@/blocks/Cards/block'
 import ContactInfoArea from '@/blocks/ContactInfoArea_2'
 import { ContactInfoArea_2_Block } from '@/blocks/ContactInfoArea_2/block'
+import { Container_Scroll } from '@/blocks/Container_Scroll'
+import { Container_Scroll_Block } from '@/blocks/Container_Scroll/block'
 import FooterThree from '@/blocks/Footer-3'
 import { FooterThree_Block } from '@/blocks/Footer-3/block'
 import FunfactArea from '@/blocks/FunfactArea'
@@ -18,6 +22,8 @@ import HelpService from '@/blocks/Help_Services'
 import { Home1_Help_Service_Block } from '@/blocks/Help_Services/block'
 import HeroTwo from '@/blocks/Hero-2'
 import { Hero_2_Block } from '@/blocks/Hero-2/block'
+import { HeroParallax } from '@/blocks/HeroParallax'
+import { HeroParallax_Block } from '@/blocks/HeroParallax/block'
 import Hero_3 from '@/blocks/Hero_3'
 import { HeroThree_Block } from '@/blocks/Hero_3/block'
 import Home1AboutUs from '@/blocks/Home1_AboutUs'
@@ -30,8 +36,6 @@ import MissionSection from '@/blocks/MissionSection_1'
 import { MissionSection_Block } from '@/blocks/MissionSection_1/block'
 import Navbar_3 from '@/blocks/Navbar_3'
 import { NavbarThree_Block } from '@/blocks/Navbar_3/block'
-import Page1 from '@/blocks/Page1'
-import { Page1_Block } from '@/blocks/Page1/block'
 import PortfolioArea from '@/blocks/PortfolioArea_2'
 import { PortfolioArea_Block } from '@/blocks/PortfolioArea_2/block'
 import PriceCtaArea from '@/blocks/PriceCtaArea-2'
@@ -48,16 +52,17 @@ import TeamSection from '@/blocks/TeamSection'
 import { TeamSection_Block } from '@/blocks/TeamSection/block'
 import Home1_Team_section from '@/blocks/Team_Section'
 import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
-import Test1_1 from '@/blocks/Test1_1'
-import { Test1_1_Block } from '@/blocks/Test1_1/block'
+import { Testimonials } from '@/blocks/Testimonials'
+import { Testimonials_Block } from '@/blocks/Testimonials/block'
 
 export const blocksJSX = {
-  Test1_1: Test1_1,
-  Page1: Page1,
-
   BrandArea: BrandArea,
   FunfactArea: FunfactArea,
   TeamSection: TeamSection,
+  Testimonials: Testimonials,
+  Cards: Cards,
+  Container_Scroll: Container_Scroll,
+  HeroParallax: HeroParallax,
 
   Home1_Banner: Home1Banner,
   Home1_Services: Home1ServicesArea,
@@ -65,7 +70,6 @@ export const blocksJSX = {
   Service_3: Service_3,
   About_2: AboutUs_2,
   ServiceArea_2: ServicesAreaTwo,
-  // PriceCalc_2: PriceCalcArea_2,
   NavbarThree: Navbar_3,
 
   ProcessThree: ProcessThree,
@@ -87,9 +91,6 @@ export const blocksJSX = {
 export type SlugType = keyof typeof blocksJSX
 
 export const blocks = {
-  Test1_1: Test1_1_Block,
-  Page1_Block: Page1_Block,
-
   BrandArea_Block: BrandArea_Block,
   FunfactArea_Block: FunfactArea_Block,
   TeamSection_Block: TeamSection_Block,
@@ -113,7 +114,10 @@ export const blocks = {
   PriceCtaArea: PriceCtaArea_Block,
   ApproachArea: ApproachArea_Block,
   MissionSection: MissionSection_Block,
-
+  Testimonials_Block: Testimonials_Block,
+  Cards_Block: Cards_Block,
+  Container_Scroll_Block: Container_Scroll_Block,
+  HeroParallax_Block: HeroParallax_Block,
   // PriceCalc_2_Block: PriceCalc_2_Block,
   ProcessThree_Block: ProcessThree_Block,
 }
