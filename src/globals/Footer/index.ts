@@ -1,143 +1,54 @@
 import { GlobalConfig } from 'payload/types'
 
-export const FooterThree_Block: GlobalConfig = {
-  slug: 'Footer_3',
-  // imageURL: '',
-  // interfaceName: 'Footer_3',
-  // labels: {
-  //   singular: 'Footer_3 Block',
-  //   plural: 'Footer_3 Blocks',
-  // },
+import FooterThree from '@/blocks/Footer-3'
+import { FooterThree_Block } from '@/blocks/Footer-3/block'
+
+export const blocks = {
+  FooterThree_Block: FooterThree_Block,
+}
+
+
+export const blocksJSX = {
+  Footer_3 : FooterThree
+}
+
+export type SlugType = keyof typeof blocksJSX
+
+
+export const Footer: GlobalConfig = {
+
+  slug: 'Footer',
+  typescript : {
+    interface: 'Footer'
+  },
+  access: {
+    read: () => true,
+  },
+  versions: {
+    drafts: {
+      autosave: true,
+    },
+  },
   fields: [
     {
-      name: 'heading_1',
-      label: 'Heading 1',
+      name: 'name',
+      label: 'Name',
       type: 'text',
       required: true,
     },
     {
-      name: 'description_1',
-      label: 'Description 1',
+      name: 'slug',
+      label: 'Slug',
       type: 'text',
       required: true,
     },
     {
-      name: 'heading_2',
-      label: 'Heading 2',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'links_1',
-      label: 'Links 1',
-      type: 'array',
-      required: true,
-      fields: [
-        {
-          name: 'link',
-          label: 'Link',
-          type: 'text',
-          required: true,
-        },
-      ],
-    },
-    {
-      name: 'links_2',
-      label: 'Links 2',
-      type: 'array',
-      required: true,
-      fields: [
-        {
-          name: 'link',
-          label: 'Link',
-          type: 'text',
-          required: true,
-        },
-      ],
-    },
-    {
-      name: 'heading_3',
-      label: 'Heading 3',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'description_2',
-      label: 'Description 2',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'button_text',
-      label: 'Button Text',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'heading_4',
-      label: 'Heading 4',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'images',
-      label: 'Images',
-      type: 'array',
-      required: true,
-      fields: [
-        {
-          name: 'image',
-          label: 'Image',
-          type: 'upload',
-          relationTo: 'media',
-          required: true,
-          admin: {
-            description: 'Upload Image',
-          },
-        },
-      ],
-    },
-    {
-      name: 'links_3',
-      label: 'Links 3',
-      type: 'array',
-      required: true,
-      fields: [
-        {
-          name: 'link',
-          label: 'Link',
-          type: 'text',
-          required: true,
-        },
-      ],
-    },
-    {
-      name: 'footer_image',
-      label: 'Footer Image',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-      admin: {
-        description: 'Upload Footer Image',
-      },
-    },
-    {
-      name: 'copyright_text',
-      label: 'Copyright Text',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'copyright_text_link',
-      label: 'Copyright Text Link',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'copyright_year',
-      label: 'Copyright Year',
-      type: 'number',
-      required: true,
+      name: 'layout',
+      label: 'Layout',
+      type: 'blocks',
+      blocks: Object.values(blocks),
+      maxRows: 1,
     },
   ],
 }
+
