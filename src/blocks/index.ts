@@ -30,6 +30,8 @@ import Home1AboutUs from '@/blocks/Home1_AboutUs'
 import { Home1_AboutUs_Block } from '@/blocks/Home1_AboutUs/block'
 import Home1Banner from '@/blocks/Home1_Banner'
 import { Home1_Banner_Block } from '@/blocks/Home1_Banner/block'
+// import Home1RecentWorks from '@/blocks/Home1_RecentWorks'
+// import { Home1_RecentWork_Block } from '@/blocks/Home1_RecentWorks/block'
 import Home1ServicesArea from '@/blocks/Home1_Services'
 import { Home1_Services_Block } from '@/blocks/Home1_Services/block'
 import MissionSection from '@/blocks/MissionSection_1'
@@ -54,6 +56,11 @@ import Home1_Team_section from '@/blocks/Team_Section'
 import { Home1_Team_section_Block } from '@/blocks/Team_Section/block'
 import { Testimonials } from '@/blocks/Testimonials'
 import { Testimonials_Block } from '@/blocks/Testimonials/block'
+
+// import Test1_1 from '@/blocks/Test1_1'
+// import { Test1_1_Block } from '@/blocks/Test1_1/block'
+import Home1_Faq from './Home1_Faq'
+import { Home1_Faq_Block } from './Home1_Faq/block'
 
 export const blocksJSX = {
   BrandArea: BrandArea,
@@ -86,6 +93,8 @@ export const blocksJSX = {
   PriceCtaArea_2: PriceCtaArea,
   ApproachArea_1: ApproachArea,
   MissionSection_1: MissionSection,
+  // Home1_RecentWork: Home1RecentWorks,
+  Home1_Faq: Home1_Faq,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -120,4 +129,5 @@ export const blocks = {
   HeroParallax_Block: HeroParallax_Block,
   // PriceCalc_2_Block: PriceCalc_2_Block,
   ProcessThree_Block: ProcessThree_Block,
+  Home1_Faq: Home1_Faq_Block,
 }
