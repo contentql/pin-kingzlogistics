@@ -16,8 +16,8 @@ export interface Config {
     'payload-migrations': PayloadMigration;
   };
   globals: {
-    Footer_3: Footer_3;
-    Navbar_3: Navbar_3;
+    Footer: Footer;
+    Navbar: Navbar;
   };
   locale: null;
   user: User & {
@@ -99,6 +99,7 @@ export interface Blog {
   };
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -110,21 +111,6 @@ export interface Page {
   slug: string;
   layout?:
     | (
-        | {
-            title: string;
-            sub_title: string;
-            button_text: string;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Test1_1';
-          }
-        | {
-            title: string;
-            sub_title: string;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'page1';
-          }
         | BrandArea
         | FunfactArea
         | TeamSection
@@ -148,8 +134,46 @@ export interface Page {
         | PriceCtaArea_2
         | ApproachArea_1
         | MissionSection_1
+        | Testimonials
+        | {
+            cards?:
+              | {
+                  title?: string | null;
+                  description?: string | null;
+                  link?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Cards';
+          }
+        | {
+            hero_data: string;
+            title: string;
+            subtitle: string;
+            image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Container_Scroll';
+          }
+        | {
+            hero?:
+              | {
+                  title?: string | null;
+                  link?: string | null;
+                  thumbnail?: string | Media | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'HeroParallax';
+          }
         | ProcessThree
         | Home1_Faq
+        | Quote
+        | ContactType
       )[]
     | null;
   updatedAt: string;
@@ -218,16 +242,7 @@ export interface Home1_Services {
   subtitle: string;
   services?:
     | {
-        serviceIcon?:
-          | (
-              | 'flaticon-boat'
-              | 'flaticon-plane'
-              | 'flaticon-frontal-truck'
-              | 'flaticon-train'
-              | 'flaticon-box'
-              | 'flaticon-bicycle'
-            )
-          | null;
+        serviceIcon?: string | Media | null;
         title: string;
         subtitle: string;
         id?: string | null;
@@ -598,6 +613,23 @@ export interface MissionSection_1 {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Testimonials".
+ */
+export interface Testimonials {
+  testimonials?:
+    | {
+        quote?: string | null;
+        name?: string | null;
+        title?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Testimonials';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "ProcessThree".
  */
 export interface ProcessThree {
@@ -637,6 +669,36 @@ export interface Home1_Faq {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Quote".
+ */
+export interface Quote {
+  tabs?:
+    | {
+        title: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Quote';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactType".
+ */
+export interface ContactType {
+  title: string;
+  subtitle: string;
+  phoneNumber: string;
+  email: string;
+  officeAddress: string;
+  buttonText: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Contact';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
@@ -671,36 +733,27 @@ export interface PayloadMigration {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "Navbar_3".
+ * via the `definition` "Footer".
  */
-export interface Navbar_3 {
+export interface Footer {
   id: string;
-  banner: string;
-  logo: string | Media;
-  button_one: string;
-  button_two: string;
-  menu?:
-    | {
-        menu_name: string;
-        menu_link: string;
-        has_drop_down?: boolean | null;
-        sub_menu?:
-          | {
-              sub_menu_name: string;
-              sub_menu_link: string;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-      }[]
-    | null;
-  facebook: string;
-  twitter: string;
-  instagram: string;
-  youtube: string;
-  phone: string;
-  email: string;
-  address: string;
+  name: string;
+  slug: string;
+  layout?: Footer_3[] | null;
+  _status?: ('draft' | 'published') | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Navbar".
+ */
+export interface Navbar {
+  id: string;
+  name: string;
+  slug: string;
+  layout?: NavbarThree[] | null;
+  _status?: ('draft' | 'published') | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

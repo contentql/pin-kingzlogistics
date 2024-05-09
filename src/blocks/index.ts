@@ -30,8 +30,8 @@ import Home1AboutUs from '@/blocks/Home1_AboutUs'
 import { Home1_AboutUs_Block } from '@/blocks/Home1_AboutUs/block'
 import Home1Banner from '@/blocks/Home1_Banner'
 import { Home1_Banner_Block } from '@/blocks/Home1_Banner/block'
-// import Home1RecentWorks from '@/blocks/Home1_RecentWorks'
-// import { Home1_RecentWork_Block } from '@/blocks/Home1_RecentWorks/block'
+import Home1RecentWorks from '@/blocks/Home1_RecentWorks'
+import { Home1_RecentWork_Block } from '@/blocks/Home1_RecentWorks/block'
 import Home1ServicesArea from '@/blocks/Home1_Services'
 import { Home1_Services_Block } from '@/blocks/Home1_Services/block'
 import MissionSection from '@/blocks/MissionSection_1'
@@ -59,8 +59,12 @@ import { Testimonials_Block } from '@/blocks/Testimonials/block'
 
 // import Test1_1 from '@/blocks/Test1_1'
 // import { Test1_1_Block } from '@/blocks/Test1_1/block'
+import Contact from './Contact'
+import { Contact_Block } from './Contact/block'
 import Home1_Faq from './Home1_Faq'
 import { Home1_Faq_Block } from './Home1_Faq/block'
+import Quote from './Quote'
+import { Quote_Block } from './Quote/block'
 
 export const blocksJSX = {
   BrandArea: BrandArea,
@@ -93,8 +97,10 @@ export const blocksJSX = {
   PriceCtaArea_2: PriceCtaArea,
   ApproachArea_1: ApproachArea,
   MissionSection_1: MissionSection,
-  // Home1_RecentWork: Home1RecentWorks,
+  Home1_RecentWork: Home1RecentWorks,
   Home1_Faq: Home1_Faq,
+  Quote: Quote,
+  Contact: Contact,
 }
 
 export type SlugType = keyof typeof blocksJSX
@@ -114,6 +120,7 @@ export const blocks = {
   Home1_Help_Service: Home1_Help_Service_Block,
   Home1_Team_section: Home1_Team_section_Block,
   Home1_AboutUs: Home1_AboutUs_Block,
+  Home1_RecentWork: Home1_RecentWork_Block,
   PortfolioArea_2: PortfolioArea_Block,
   ServiceCta_2: ServiceCta_2_Block,
   ContactInfoArea_2: ContactInfoArea_2_Block,
@@ -130,4 +137,6 @@ export const blocks = {
   // PriceCalc_2_Block: PriceCalc_2_Block,
   ProcessThree_Block: ProcessThree_Block,
   Home1_Faq: Home1_Faq_Block,
+  Quote: Quote_Block,
+  Contact: Contact_Block,
 }
