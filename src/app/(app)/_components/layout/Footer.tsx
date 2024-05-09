@@ -5,7 +5,9 @@ export const Footer = ({footerData} : {footerData : any}) => {
 
     console.log(footerData)
     return <div>
+         {/* ! footer data will always be an array with one element */}
         {
+            
             footerData?.layout.map((block : any, index : number) => {
                 console.log("block", block)
                 const Block = blocksJSX[block.blockType as SlugType]
