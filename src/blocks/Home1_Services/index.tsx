@@ -12,11 +12,13 @@ const Home1ServicesArea = () => {
     <section
       id='services__area-2'
       className='services__area-2 fix grey-bg-2 pt-120 pb-120'
-      style={{ backgroundImage: `url(${banner_overlay.src})` }}>
+      style={{ backgroundImage: `url(${banner_overlay.src})` }}
+    >
       <div
         className='services__section-area wow fadeInUp'
         data-wow-duration='1.5s'
-        data-wow-delay='.3s'>
+        data-wow-delay='.3s'
+      >
         <div className='container'>
           <div className='row'>
             <div className='col-lg-3 col-md-4'>
@@ -69,7 +71,8 @@ const Home1ServicesArea = () => {
                         0: {
                           slidesPerView: 3,
                         },
-                      }}>
+                      }}
+                    >
                       {services_data.slice(0, 6).map(item => (
                         <SwiperSlide key={item.id}>
                           <div className='swiper-slide'>

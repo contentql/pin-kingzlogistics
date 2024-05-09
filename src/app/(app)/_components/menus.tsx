@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 const menu_data = [
   {
@@ -97,7 +97,8 @@ const Menus = ({ menus }: any) => {
       {menus?.map((menu: any, i: number) => (
         <li
           key={i}
-          className={` ${menu.has_drop_down ? 'menu-item-has-children' : ''}`}>
+          className={` ${menu.has_drop_down ? 'menu-item-has-children' : ''}`}
+        >
           <Link href={menu.menu_link || ''}>{menu.menu_name}</Link>
           {menu.has_drop_down && (
             <ul className='sub-menu'>

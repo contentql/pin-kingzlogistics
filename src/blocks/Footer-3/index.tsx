@@ -81,7 +81,8 @@ const FooterThree = (Footer_3Data: Footer_3) => {
                 <form
                   onSubmit={handleSubmit}
                   action='#'
-                  className='subscribe-form subscribe-form-footer1'>
+                  className='subscribe-form subscribe-form-footer1'
+                >
                   <div className='s-clip p-relative s-input mb-10'>
                     <input type='text' placeholder='Enter your email' />
                     <i className='fas fa-envelope'></i>

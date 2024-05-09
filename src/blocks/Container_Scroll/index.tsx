@@ -21,7 +21,8 @@ export function Container_Scroll(data: any) {
               </span>
             </h1>
           </>
-        }>
+        }
+      >
         <Image
           src={data?.image?.url || ''}
           alt='hero'

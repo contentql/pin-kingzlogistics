@@ -7,19 +7,16 @@ export const blocks = {
   FooterThree_Block: FooterThree_Block,
 }
 
-
 export const blocksJSX = {
-  Footer_3 : FooterThree
+  Footer_3: FooterThree,
 }
 
 export type SlugType = keyof typeof blocksJSX
 
-
 export const Footer: GlobalConfig = {
-
   slug: 'Footer',
-  typescript : {
-    interface: 'Footer'
+  typescript: {
+    interface: 'Footer',
   },
   access: {
     read: () => true,
@@ -51,4 +48,3 @@ export const Footer: GlobalConfig = {
     },
   ],
 }
-

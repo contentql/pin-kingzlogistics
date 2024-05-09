@@ -16,7 +16,8 @@ const ApproachArea = (ApproachArea_1_data: ApproachArea_1) => {
             <div
               className='approach__content wow fadeInUp'
               data-wow-duration='1.5s'
-              data-wow-delay='.3s'>
+              data-wow-delay='.3s'
+            >
               <div className='section__title mb-35'>
                 <span className='sub-title'>{ApproachArea_1_data?.tag}</span>
                 <h2 className='title'>{ApproachArea_1_data?.title}</h2>

@@ -5,8 +5,21 @@ import React from 'react'
 import MobileMenus from './mobile-menus'
 
 const OffCanvasMain = ({ isOffCanvasOpen, setIsOffCanvasOpen, data }: any) => {
-
-  const {address,banner,blockType,button_one, button_two, email, facebook, instagram, logo, phone, twitter, youtube,menu} = data
+  const {
+    address,
+    banner,
+    blockType,
+    button_one,
+    button_two,
+    email,
+    facebook,
+    instagram,
+    logo,
+    phone,
+    twitter,
+    youtube,
+    menu,
+  } = data
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
@@ -15,13 +28,15 @@ const OffCanvasMain = ({ isOffCanvasOpen, setIsOffCanvasOpen, data }: any) => {
   return (
     <React.Fragment>
       <div
-        className={`sidebar__area ${isOffCanvasOpen ? 'sidebar-opened' : ''}`}>
+        className={`sidebar__area ${isOffCanvasOpen ? 'sidebar-opened' : ''}`}
+      >
         <div className='sidebar__wrapper'>
           <div className='sidebar__close'>
             <button
               className='sidebar__close-btn'
               id='sidebar__close-btn'
-              onClick={() => setIsOffCanvasOpen(false)}>
+              onClick={() => setIsOffCanvasOpen(false)}
+            >
               <i className='fal fa-times'></i>
             </button>
           </div>
@@ -110,7 +125,8 @@ const OffCanvasMain = ({ isOffCanvasOpen, setIsOffCanvasOpen, data }: any) => {
       </div>
       <div
         className={`body-overlay ${isOffCanvasOpen ? 'opened' : ''}`}
-        onClick={() => setIsOffCanvasOpen(false)}></div>
+        onClick={() => setIsOffCanvasOpen(false)}
+      ></div>
     </React.Fragment>
   )
 }

@@ -27,7 +27,8 @@ const Hero_3 = (data: HeroThree) => {
             navigation={{
               nextEl: '.slider-button-next',
               prevEl: '.slider-button-prev',
-            }}>
+            }}
+          >
             {hero.map((item: any, index: number) => (
               <SwiperSlide key={index}>
                 <div>
@@ -36,7 +37,8 @@ const Hero_3 = (data: HeroThree) => {
                       className='banner-bg banner-bg1 banner-bg1-1'
                       style={{
                         backgroundImage: `url(${item.hero_2_image.url})`,
-                      }}></div>
+                      }}
+                    ></div>
                     <div className='container pos-rel'>
                       <div className='row align-items-center'>
                         <div className='col-lg-8'>
@@ -44,22 +46,26 @@ const Hero_3 = (data: HeroThree) => {
                             <div
                               className='banner-meta-text'
                               data-animation='fadeInUp'
-                              data-delay='.3s'>
+                              data-delay='.3s'
+                            >
                               <span>{item.title}</span>
                             </div>
                             <h1
                               className='banner-title'
                               data-animation='fadeInUp'
-                              data-delay='.5s'>
+                              data-delay='.5s'
+                            >
                               {item.title_2} <br /> {item.sub_title}
                             </h1>
                             <div
                               className='banner-btn'
                               data-animation='fadeInUp'
-                              data-delay='.7s'>
+                              data-delay='.7s'
+                            >
                               <Link
                                 href='/contact'
-                                className='fill-btn clip-btn'>
+                                className='fill-btn clip-btn'
+                              >
                                 {button_one}
                               </Link>
                               <Link className='skew-btn' href='/services'>

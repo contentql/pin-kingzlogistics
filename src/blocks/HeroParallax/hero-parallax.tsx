@@ -50,7 +50,8 @@ export const HeroParallaxUI = ({ products }: { products: any }) => {
   return (
     <div
       ref={ref}
-      className='h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]'>
+      className='h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]'
+    >
       <Header />
       <motion.div
         style={{
@@ -59,7 +60,8 @@ export const HeroParallaxUI = ({ products }: { products: any }) => {
           translateY,
           opacity,
         }}
-        className=''>
+        className=''
+      >
         <motion.div className='flex flex-row-reverse space-x-reverse space-x-20 mb-20'>
           {firstRow?.map((product: any) => (
             <ProductCard
@@ -124,10 +126,12 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className='group/product h-96 w-[30rem] relative flex-shrink-0'>
+      className='group/product h-96 w-[30rem] relative flex-shrink-0'
+    >
       <Link
         href={product.link}
-        className='block group-hover/product:shadow-2xl '>
+        className='block group-hover/product:shadow-2xl '
+      >
         <Image
           src={product?.thumbnail?.url}
           height='600'

@@ -1,24 +1,35 @@
 'use client'
 
-import { NavbarThree } from '@payload-types'
-import Image from 'next/image'
 import OffCanvasMain from '../../app/(app)/_components/common/off-canvas'
 import Menus from '../../app/(app)/_components/menus'
+import { NavbarThree } from '@payload-types'
+import Image from 'next/image'
 // import Logo from '@assets/img/logo/logo.png'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const Navbar_3 = (data: NavbarThree) => {
-
-  const {address,banner,button_one,button_two,email,facebook,instagram,logo,phone,twitter,youtube,menu} = data
-   // Sticky Menu Area start
+  const {
+    address,
+    banner,
+    button_one,
+    button_two,
+    email,
+    facebook,
+    instagram,
+    logo,
+    phone,
+    twitter,
+    youtube,
+    menu,
+  } = data
+  // Sticky Menu Area start
   useEffect(() => {
     window.addEventListener('scroll', sticky)
     return () => {
       window.removeEventListener('scroll', sticky)
     }
   })
-
 
   const sticky = (e: any) => {
     const header = document.querySelector('.menu-sticky')
@@ -97,7 +108,8 @@ const Navbar_3 = (data: NavbarThree) => {
                     <div className='header__toggle-btn sidebar-toggle-btn'>
                       <div
                         className='header__bar'
-                        onClick={() => setIsOffCanvasOpen(true)}>
+                        onClick={() => setIsOffCanvasOpen(true)}
+                      >
                         <span></span>
                         <span></span>
                         <span></span>
@@ -213,7 +225,8 @@ const Navbar_3 = (data: NavbarThree) => {
               <div className='header__toggle-btn sidebar-toggle-btn text-end d-block d-lg-none'>
                 <div
                   className='header__bar'
-                  onClick={() => setIsOffCanvasOpen(true)}>
+                  onClick={() => setIsOffCanvasOpen(true)}
+                >
                   <span></span>
                   <span></span>
                   <span></span>

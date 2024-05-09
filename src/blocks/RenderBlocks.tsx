@@ -31,7 +31,6 @@ const RenderBlocks: React.FC<RenderBlocksProps> = ({
     depth: 2,
   })
 
-
   // Determine which data to use based on whether live preview data is available
   const dataToUse = livePreviewData?.layout || pageData?.layout
 

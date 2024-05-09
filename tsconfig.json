@@ -26,7 +26,6 @@
 
       "@styles/*": ["./src/app/(app)/_styles/*"],
       "@data/*": ["./src/data/*"]
-
     },
     "target": "ES2017"
   },

@@ -9,17 +9,15 @@ export const blocks = {
 
 export type SlugType = keyof typeof blocksJSX
 
-
 export const blocksJSX = {
-  NavbarThree : Navbar_3
+  NavbarThree: Navbar_3,
 }
 
-
 export const Navbar: GlobalConfig = {
-   slug: 'Navbar',
-   typescript : {
-    interface: 'Navbar'
-   },
+  slug: 'Navbar',
+  typescript: {
+    interface: 'Navbar',
+  },
   access: {
     read: () => true,
   },

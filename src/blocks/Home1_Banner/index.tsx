@@ -11,7 +11,8 @@ const Home1Banner = ({ data }: any) => {
             <div className='single-banner single-banner-2 banner-970'>
               <div
                 className='banner-bg banner-bg2'
-                style={{ backgroundImage: `url(${banner_overlay.src})` }}></div>
+                style={{ backgroundImage: `url(${banner_overlay.src})` }}
+              ></div>
               <div className='container pos-rel'>
                 <div className='row align-items-center justify-content-center'>
                   <div className='col-lg-8'>
@@ -19,7 +20,8 @@ const Home1Banner = ({ data }: any) => {
                       <h1
                         className='banner-title'
                         data-animation='fadeInUp'
-                        data-delay='.5s'>
+                        data-delay='.5s'
+                      >
                         Transport Anything <br /> From Anywhere.
                       </h1>
                     </div>

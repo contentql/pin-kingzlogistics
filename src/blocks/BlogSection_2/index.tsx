@@ -6,7 +6,8 @@ const BlogSectionTwo = (BlogSection_2Data: BlogSection_2) => {
     <section
       className='blog pt-120 pb-55 grey-bg-4 wow fadeInUp'
       data-wow-duration='1.5s'
-      data-wow-delay='.3s'>
+      data-wow-delay='.3s'
+    >
       <div className='container'>
         <div className='row align-items-center justify-content-center'>
           <div className='col-md-8'>
@@ -23,13 +24,15 @@ const BlogSectionTwo = (BlogSection_2Data: BlogSection_2) => {
                 <div
                   className='blog__item mb-60 w-img wow fadeInUp'
                   data-wow-duration='1.5s'
-                  data-wow-delay='.3s'>
+                  data-wow-delay='.3s'
+                >
                   <div className='blog__item-img mb-35'>
                     <Link href={`/blog-details/${index + 1}`}>
                       <img
                         src={(item?.blog_image as Media)?.url || ''}
                         alt='Blog-Img'
-                        style={{ width: '100%', height: 'auto' }}></img>
+                        style={{ width: '100%', height: 'auto' }}
+                      ></img>
                     </Link>
                     <div className='blog__meta dp-blog-meta1'>
                       <span>
