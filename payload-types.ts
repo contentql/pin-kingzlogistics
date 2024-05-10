@@ -174,6 +174,7 @@ export interface Page {
         | Home1_Faq
         | Quote
         | ContactType
+        | BlogType
       )[]
     | null;
   updatedAt: string;
@@ -696,6 +697,23 @@ export interface ContactType {
   id?: string | null;
   blockName?: string | null;
   blockType: 'Contact';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BlogType".
+ */
+export interface BlogType {
+  blogs?:
+    | {
+        title: string;
+        description: string;
+        blogImage?: string | Media | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Blog';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
